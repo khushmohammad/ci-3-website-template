@@ -53,7 +53,15 @@ class DashboardController extends CI_Controller
 		$this->load->view('Backend/Footer');
 	}
 
+	public function InsertDealer()
+	{
+		echo "Deaer";
+	}
+
 
 	//END  VIEW DATA  
 	//site user view
+
+
+
 }

@@ -1,16 +1,14 @@
-<section id="PageHeading" style="background: url(<?php echo site_url("public/frontend/assets/img/Avenue/about-bg.jpg")  ?> );">
-    <div class="page-heading py-5">
-        <div class="container py-5">
-            <div class="row align-items-center py-5">
-                <div class="col-md-12 px-3 slide-text text-md-start text-center">
-                    <h1 class="text-dark">About Us</h1>
+<?php
 
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+$headingtag = "h1";
+$headingtagClass = "text-dark pt-5";
+$headingtext = "About Us";
+$data = array(
+    'title' => "<" . $headingtag . " class='" . $headingtagClass . "' > " . $headingtext . "  </" . $headingtag . ">",
+    "bgImage" => 'about-bg.jpg'
+);
+$this->load->view('FrontEnd/Template/PageHeading', $data);
+?>
 
 <section id="about">
     <div class="container py-5 text-center">
@@ -40,5 +38,4 @@
 
 <?php
 $this->load->view('FrontEnd/Template/RequestConsultation');
-
 ?>
