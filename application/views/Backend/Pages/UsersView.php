@@ -18,7 +18,7 @@
             <div class="card mb-4">
 
                 <div class="card-body">
-                    <table id="datatablesSimple">
+                    <table id="datatablesSimple" class="table table-striped nowrap" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Name</th>

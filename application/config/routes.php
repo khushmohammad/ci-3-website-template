@@ -63,8 +63,15 @@ $route['admin/Login'] = 'BackendControllers/LoginController';
 $route['admin/logout'] = 'BackendControllers/LoginController/logout';
 
 $route['admin/(:any)'] = 'BackendControllers/DashboardController/$1';
+$route['admin/AddEditDealer/(:any)'] = 'BackendControllers/DashboardController/AddEditDealer/$1';
+
 $route['(:any)'] = 'FrontEndControllers/Pages/View/$1';
+
+
 
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+

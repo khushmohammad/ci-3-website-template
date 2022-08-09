@@ -19,6 +19,7 @@ class HomePageController extends CI_Controller
 
     }
 
+    
     //END  VIEW DATA  
     //site user view
 }

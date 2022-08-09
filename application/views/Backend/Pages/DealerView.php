@@ -1,12 +1,14 @@
 <div id="layoutSidenav_content" class="pt-5">
+
     <?php
     $url = $this->uri->uri_string();
 
     // echo "<pre>";
-    // echo print_r($user);
+    // echo print_r($dealer);
     // echo "</pre>";
+
+
     ?>
-    
     <main>
         <div class="container-fluid px-4">
             <h1 class="mt-4">DealerView List</h1>
@@ -18,36 +20,66 @@
             <div class="card mb-4">
 
                 <div class="card-body">
-                    <table id="datatablesSimple">
+                    <table id="Dealerdatatables" class="table table-striped nowrap" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Name</th>
+                            <tr>
+                                <th>S No</th>
+                                <th>Dealer Name</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>District</th>
+                                <th>State</th>
+                                <th>Phone Number</th>
                                 <th>Email</th>
-                                <th>Contact</th>
-                                <th>Status</th>
+                                <th>License No</th>
+                                <th>Issue Date</th>
+                                <th>Expiry Date</th>
+                                <th>License Issue by</th>
+                                <th>Pincode</th>
                                 <th>Edit</th>
+                            </tr>
 
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Name</th>
+                                <th>S No</th>
+                                <th>Dealer Name</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>District</th>
+                                <th>State</th>
+                                <th>Phone Number</th>
                                 <th>Email</th>
-                                <th>Contact</th>
-                                <th>Status</th>
+                                <th>License No</th>
+                                <th>Issue Date</th>
+                                <th>Expiry Date</th>
+                                <th>License Issue by</th>
+                                <th>Pincode</th>
                                 <th>Edit</th>
-
-
                             </tr>
                         </tfoot>
                         <tbody>
+
+
+
                             <?php
-                            foreach ($user as $value) {
+                            foreach ($dealer as $value) {
                                 echo " <tr>";
-                                echo  "<td>" .  $value["U_USERNAME"]  . "</td>";
-                                echo  "<td>" .  $value["U_EMAIL"]  . "</td>";
-                                echo  "<td>" .  $value["U_CONTACT"]  . "</td>";
-                                echo  "<td>" .  $value["U_ACTIVE"]  . "</td>";
+                                echo  "<td>" .  $value["id"]  . "</td>";
+                                echo  "<td>" .  $value["Dealer_Name"]  . "</td>";
+                                echo  "<td>" .  $value["Address"]  . "</td>";
+                                echo  "<td>" .  $value["City"]  . "</td>";
+                                echo  "<td>" .  $value["District"]  . "</td>";
+                                echo  "<td>" .  $value["State"]  . "</td>";
+                                echo  "<td>" .  $value["Phone_Number"]  . "</td>";
+                                echo  "<td>" .  $value["Email"]  . "</td>";
+                                echo  "<td>" .  $value["License_No"]  . "</td>";
+                                echo  "<td>" .  $value["Issue_Date"]  . "</td>";
+                                echo  "<td>" .  $value["Expiry_Date"]  . "</td>";
+                                echo  "<td>" .  $value["License_Issue_by"]  . "</td>";
+                                echo  "<td>" .  $value["Pincode"]  . "</td>";
 
                                 echo ' <td>
                                 <div class="dropdown">
@@ -56,10 +88,10 @@
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li>
-                                            <a id="Edit" class="dropdown-item ButtonId" data-bs-toggle="modal" data-bs-target="#User_ViewAddEditModal" href="#">Edit</a>
+                                            <a id="Edit" class="dropdown-item ButtonId"  href="' . site_url() . 'admin/AddEditDealer/' . $value["id"] . '">Edit</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">Delete</a>
+                                            <button class="dropdown-item" id="Delete" onclick="DeleteDealer(this)"  dataId=' . $value["id"] . ' >Delete</button>
                                         </li>
                                     </ul>
                                 </div>
@@ -73,16 +105,8 @@
             </div>
         </div>
     </main>
-
-
-
-
-
 </div>
-
-
 <!-- modal for crud -->
-
 <div class="modal fade" id="User_ViewAddEditModal" tabindex="-1" aria-labelledby="User_ViewAddEditModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -138,3 +162,66 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    var table = $('#Dealerdatatables').DataTable({
+        scrollY: '50vh',
+        scrollCollapse: false,
+        responsive: true,
+        columnDefs: [{
+                responsivePriority: 1,
+                targets: 0
+            },
+            {
+                responsivePriority: 13,
+                targets: -1
+            }
+        ]
+        // responsive: {
+        //     details: {
+        //         display: $.fn.dataTable.Responsive.display.modal( {
+        //             header: function ( row ) {
+        //                 var data = row.data();
+        //                 return 'Details for '+data[0]+' '+data[1];
+        //             }
+        //         } ),
+        //         renderer: $.fn.dataTable.Responsive.renderer.tableAll( {
+        //             tableClass: 'table'
+        //         } )
+        //     }
+        // }
+
+    })
+
+    function DeleteDealer(e) {
+        console.log(e.attributes.dataid.value, "ee");
+
+        var Id = e.attributes.dataid.value;
+
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url(); ?>BackendControllers/DashboardController/DeleteDealer',
+
+            dataType: "json",
+            data: {
+                ID: Id
+            },
+            encode: true,
+            success: function(data) {
+                console.log(data);
+
+                //.  $('#Dealerdatatables').DataTable().ajax.reload();
+                setTimeout(() => {
+                    // table.DataTable().rows().draw();
+                    location.reload();
+                }, 500);
+
+            }
+        });
+
+        //var table = $('#Dealerdatatables').dataTable();
+
+
+        //$('#datatablesSimple').DataTable().ajax.reload(null, false)
+
+    }
+</script>

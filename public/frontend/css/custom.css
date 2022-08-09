@@ -368,4 +368,16 @@ header.masthead .h1 {
   border-radius: 40px;
 }
 
+.input-error {
+  font-size: 12px;
+  margin: 0;
+
+}
+
+.input-error p {
+  font-size: 12px;
+  margin: 0;
+
+}
+
 /*# sourceMappingURL=style.css.map */
