@@ -38,12 +38,11 @@ class Pages extends CI_Controller
                 //'word'          => 'Randdfdom word',
                 'img_path'      => './captcha-images/',
                 'img_url'       => base_url() . 'captcha-images/',
-                'font_path'     => './path/to/fonts/Poppins-Regular.ttf',
+                'font_path'     => './path/to/fonts/texb.ttf',
                 'img_width'     => 200,
                 'img_height'    => 40,
                 'expiration'    => 500,
                 'word_length'   => 4,
-                'font'     => true,
                 'font_size'     => 29,
                 'img_id'        => 'Imageid',
                 'pool'          => '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -51,9 +50,9 @@ class Pages extends CI_Controller
                 // White background and border, black text and red grid
                 'colors'        => array(
                     'background' => array(255, 255, 255),
-                    'border' => array(255, 255, 255),
+                    'border' => array(206, 212, 218),
                     'text' => array(0, 0, 0),
-                    'grid' => array(255, 40, 40)
+                    'grid' => array(255, 192, 192)
                 )
             );
 
@@ -199,7 +198,26 @@ class Pages extends CI_Controller
             }
         } else {
             echo json_encode(['error' => 'Captcha does not match.']);
-            $this->session->set_flashdata('error', '<div class="alert alert-danger"></div>');           
+            $this->session->set_flashdata('error', '<div class="alert alert-danger"></div>');
+        }
+    }
+
+    public function getAddress()
+    {
+        $pincode = $_POST['pincode'];
+        $data = file_get_contents('http://postalpincode.in/api/pincode/' . $pincode);
+        $data = json_decode($data);
+            // echo "<pre>";
+            // echo print_r($data->PostOffice);
+            // die();
+        if (isset($data->PostOffice['0'])) {
+            $arr['City'] = $data->PostOffice['0']->Taluk;
+            $arr['District'] = $data->PostOffice['0']->District;
+            $arr['State'] = $data->PostOffice['0']->State;
+            $arr['VillageList'] = $data->PostOffice;
+            echo json_encode($arr);
+        } else {
+            echo 'no';
         }
     }
 }

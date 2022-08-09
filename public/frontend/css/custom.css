@@ -380,4 +380,21 @@ header.masthead .h1 {
 
 }
 
+.loadingspinner {
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background: #00000040;
+  z-index: 10001;
+
+}
+
 /*# sourceMappingURL=style.css.map */

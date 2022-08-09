@@ -37,13 +37,7 @@
             </div>
 
         </div>
-        <div class="col-md-6">
-            <div class="mb-3">
-                <label for="Email" class="form-label">Email</label>
-                <input type="Email" class="form-control" value="<?php echo set_value('Email'); ?>" name="Email" id="Email" placeholder="abc@email.com">
-            </div>
 
-        </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="LicenseNo" class="form-label">License No</label>
@@ -71,29 +65,56 @@
         </div>
         <div class="col-md-6">
             <div class="mb-3">
-                <label for="LicenseIssueBy" class="form-label">License Issue Authority</label>
-                <input type="text" class="form-control" value="<?php echo set_value('LicenseIssueBy'); ?>" name="LicenseIssueBy" id="LicenseIssueBy" placeholder="EnterLicense Issue By">
-            </div>
-
-        </div>
-        <div class="col-md-12">
-            <div class="mb-3">
-                <label for="Address" class="form-label">Address</label>
-                <input type="text" class="form-control" value="<?php echo set_value('Address'); ?>" name="Address" id="Address" placeholder="Enter Address">
-            </div>
-
-        </div>
-        <div class="col-md-12">
-            <div class="mb-3">
-                <label for="Pincode" class="form-label">Pincode</label>
-                <input type="text" class="form-control" value="<?php echo set_value('Pincode'); ?>" name="Pincode" id="Pincode" placeholder="Enter Pincode">
+                <label for="LicenseIssueBy" class="form-label">License Issue By</label>
+                <input type="text" class="form-control" value="<?php echo set_value('LicenseIssueBy'); ?>" name="LicenseIssueBy" id="LicenseIssueBy" placeholder="Enter License Issue By">
             </div>
 
         </div>
         <div class="col-md-6">
             <div class="mb-3">
+                <label for="Email" class="form-label">Email</label>
+                <input type="Email" class="form-control" value="<?php echo set_value('Email'); ?>" name="Email" id="Email" placeholder="abc@email.com">
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="Address" class="form-label">Address</label>
+                <input type="text" class="form-control" value="<?php echo set_value('Address'); ?>" name="Address" id="Address" placeholder="Enter Address">
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-lg-6">
+            <div class="">
+                <label for="Pincode" class="form-label">Pincode</label>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" value="311407" name="Pincode" id="Pincode" placeholder="Enter Pincode">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-primary input-group-text" id="basic-addon2" onclick="get_details()">Get City</button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-6">
+            <!-- <div class="mb-3">
+                <label for="City" class="form-label">City</label>
+                <input type="text" class="form-control"  name="City" id="City" placeholder="Enter City" readonly>
+            </div> -->
+            <div class="mb-3">
+                <label for="City" class="form-label">City/Village</label>
+                <select class="form-select" name="City" aria-label="Default select example" id="City">
+                    <option selected>Select City/Village</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mb-3">
                 <label for="State" class="form-label">State</label>
-                <input type="text" class="form-control" value="<?php echo set_value('State'); ?>" name="State" id="State" placeholder="Enter State">
+                <input type="text" class="form-control" value="<?php echo set_value('State'); ?>" name="State" id="State" placeholder="Enter State" readonly>
             </div>
             <!-- <label for="State" class="form-label">State</label>
             <select class="form-select" name="State" aria-label="Default select example">
@@ -106,16 +127,10 @@
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="District" class="form-label">District</label>
-                <input type="text" class="form-control" value="<?php echo set_value('District'); ?>" name="District" id="District" placeholders="Enter District">
+                <input type="text" class="form-control" value="<?php echo set_value('District'); ?>" name="District" id="District" placeholder="Enter District" readonly>
             </div>
+        </div>
 
-        </div>
-        <div class="col-md-6">
-            <div class="mb-3">
-                <label for="City" class="form-label">City</label>
-                <input type="text" class="form-control" value="<?php echo set_value('City'); ?>" name="City" id="City" placeholder="Enter City">
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -126,36 +141,14 @@
                 <div class="mb-3">
                     <label for="City" class="form-label">Captcha</label>
                     <input type="text" name="captcha" class="form-control" required>
-
                 </div>
-
             </div>
         </div>
-
-
-
-
-
         <div class="col-12">
-
-
-
             <div id="formSuccess" class="alert  alert-success  d-none my-4" role="alert">
-
             </div>
-
             <button type="submit" class="btn bg-danger text-light">Send</button>
         </div>
-
-        <div class="col-12">
-            <p class="text-danger"> <?php
-                                    if ($this->session->flashdata('error') != '') {
-                                        echo $this->session->flashdata('error');
-                                    }
-                                    ?></p>
-
-        </div>
-
     </div>
 </form>
 
@@ -181,7 +174,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-
+        $( "#IssueDate" ).datepicker({ maxDate: 0 } );
+        $( "#IssueDate" ).datepicker( "option", "dateFormat","dd-mm-yy");
+        $( "#ExpiryDateId" ).datepicker({ minDate: 0 } );
+        $( "#ExpiryDateId" ).datepicker( "option", "dateFormat","dd-mm-yy");
         //  console.log();
         $("#ContactForm").submit(function(e) {
 
@@ -222,4 +218,55 @@
 
         });
     });
+
+    function get_details() {
+
+        var pincode = jQuery('#Pincode').val();
+        if (pincode == '') {
+
+            $('#District').val('');
+            $('#State').val('');
+            $('#City').empty().append(
+                $('<option></option>').val("").html("Select City/Village")
+            );
+        } else {
+            $.ajax({
+                url: '<?php echo site_url(); ?>FrontEndControllers/Pages/getAddress',
+                type: 'post',
+                data: 'pincode=' + pincode,
+                success: function(data) {
+                    if (data == 'no') {
+                        alert('Wrong Pincode');
+                        $('#District').val('');
+                        $('#State').val('');
+                        $('#City').empty().append(
+                            $('<option></option>').val("").html("Select City/Village")
+                        );
+                    } else {
+                        $('#City').empty().append(
+                            $('<option></option>').val("").html("Select City/Village")
+                        );
+                        var getData = $.parseJSON(data);
+                        var finalObj = {};
+                        for (var i = 0; i < getData.VillageList.length; ++i) {
+                            finalObj[i] = getData.VillageList[i];
+                        }
+                        var mySelect = $('#City');
+                        $.each(finalObj, function(val, text) {
+
+                            console.log(text.Name, text.Name);
+                            mySelect.append(
+                                $('<option></option>').val(text.Name).html(text.Name)
+                            );
+                        });
+
+                        // $('#City').val(getData.City);
+                        //$('#City').val(getData.VillageList);
+                        $('#State').val(getData.State);
+                        $('#District').val(getData.District);
+                    }
+                }
+            });
+        }
+    }
 </script>
