@@ -12,10 +12,18 @@
     <main>
         <div class="container-fluid px-4">
             <h1 class="mt-4">DealerView List</h1>
-            <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                <li class="breadcrumb-item active"><?php echo $url; ?></li>
-            </ol>
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><?php echo $url; ?></li>
+
+                    </ol>
+                </div>
+                <div class="col text-center">
+                    <a type="button" class="btn btn-primary float-md-end" href="<?php echo site_url(); ?>admin/AddEditDealer">Add</a>
+                </div>
+            </div>
 
             <div class="card mb-4">
 

@@ -226,7 +226,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                             setTimeout(() => {
                                 $("#formSuccess").addClass('d-none');
                             }, 3000);
-                            $('#ContactForm')[0].reset();
+                           // $('#ContactForm')[0].reset();
 
                         } else {
                             $('#exampleModal').modal('show');
