@@ -1,28 +1,15 @@
-<div class="py-5 my-5 container">
+<div class="py-5 my-5 container px-4">
 
     <?php
     $url = $this->uri->uri_string();
 
-    // echo "<pre>";
-    // echo print_r($dealer);
-    // echo "</pre>";
-
-    $Dealer_Name = empty($dealer['Dealer_Name']) ? "" : $dealer['Dealer_Name'];
-    $Address = empty($dealer['Address']) ? "" : $dealer['Address'];
-    $City = empty($dealer['City']) ? "" : $dealer['City'];
-    $District = empty($dealer['District']) ? "" : $dealer['District'];
-    $State = empty($dealer['State']) ? "" : $dealer['State'];
-    $Phone_Number = empty($dealer['Phone_Number']) ? "" : $dealer['Phone_Number'];
-    $Email = empty($dealer['Email']) ? "" : $dealer['Email'];
-    $License_No = empty($dealer['License_No']) ? "" : $dealer['License_No'];
-    $Issue_Date = empty($dealer['Issue_Date']) ? "" : $dealer['Issue_Date'];
-    $Expiry_Date = empty($dealer['Expiry_Date']) ? "" : $dealer['Expiry_Date'];
-    $License_Issue_by = empty($dealer['License_Issue_by']) ? "" : $dealer['License_Issue_by'];
-    $Pincode = empty($dealer['Pincode']) ? "" : $dealer['Pincode'];
 
 
     ?>
-    <div class="row">
+    <?php
+    $this->load->view('FrontEnd/Template/ContactForm');
+    ?>
+    <!-- <div class="row">
         <div class="col-sm-12">
 
             <form id="ContactForm" method="post">
@@ -64,10 +51,7 @@
                             <input type="text" class="form-control" value="<?php echo $Issue_Date; ?>" name="IssueDate" id="IssueDate" placeholder="Enter Issue Date">
                         </div>
 
-                        <!-- <div class="mb-3">
-                                                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                                                <textarea class="form-control" name="" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                            </div> -->
+                       
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
@@ -98,10 +82,7 @@
 
                     </div>
                     <div class="col-md-6">
-                        <!-- <div class="mb-3">
-                    <label for="State" class="form-label">State</label>
-                    <input type="text" class="form-control" name="State" id="State" value="Enter State">
-                </div> -->
+                     
                         <label for="State" class="form-label">State</label>
                         <select class="form-select" name="State" aria-label="Default select example">
                             <option selected>Open this select menu</option>
@@ -137,5 +118,5 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
 </div>
