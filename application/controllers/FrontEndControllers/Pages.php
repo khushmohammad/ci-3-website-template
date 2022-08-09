@@ -41,7 +41,7 @@ class Pages extends CI_Controller
                 'font_path'     => './path/to/fonts/Poppins-Regular.ttf',
                 'img_width'     => 200,
                 'img_height'    => 40,
-                'expiration'    => 50,
+                'expiration'    => 500,
                 'word_length'   => 4,
                 'font'     => true,
                 'font_size'     => 29,
