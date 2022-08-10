@@ -41,7 +41,7 @@ class Pages extends CI_Controller
                 'font_path'     => './path/to/fonts/texb.ttf',
                 'img_width'     => 200,
                 'img_height'    => 40,
-                'expiration'    => 500,
+                'expiration'    => 1000,
                 'word_length'   => 4,
                 'font_size'     => 29,
                 'img_id'        => 'Imageid',
