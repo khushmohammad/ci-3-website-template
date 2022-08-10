@@ -33,7 +33,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
 
             </div>
             <div class="col-md-4">
-                <img src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Brite-Bio-Fertilizer-09-removebg-preview.png" class="img-fluid " alt="">
+                <img src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Brite-Bio-Fertilizer-09-removebg-preview.png" class="img-fluid " alt="Bio Fertilizers">
             </div>
         </div>
 
@@ -48,7 +48,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
         </div>
         <div class="row align-items-center">
             <div class="col-md-4">
-                <img src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Brite-Bio-Fertilizer-10-removebg-preview.png" class="img-fluid " alt="">
+                <img src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Brite-Bio-Fertilizer-10-removebg-preview.png" class="img-fluid " alt="Bio Fertilizers">
 
             </div>
             <div class="col-md-8">
@@ -96,7 +96,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
 
             </div>
             <div class="col-md-4">
-                <img src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Brite-Bio-Fertilizer-02-min-1-e1659700492283.png" class="img-fluid " alt="">
+                <img src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Brite-Bio-Fertilizer-02-min-1-e1659700492283.png" class="img-fluid " alt="Bio Fertilizers">
             </div>
         </div>
 
@@ -113,7 +113,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
         </div>
         <div class="row align-items-center">
             <div class="col-md-4">
-                <img src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Brite-Bio-Fertilizer-01-min-1.png" class="img-fluid " alt="">
+                <img src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Brite-Bio-Fertilizer-01-min-1.png" class="img-fluid " alt="Bio Fertilizers">
 
             </div>
             <div class="col-md-8">

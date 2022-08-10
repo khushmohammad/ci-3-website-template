@@ -23,7 +23,7 @@ $url = $this->uri->uri_string();
             </div>
             <div class="col-sm-4 footer-logo">
                 <div class=" text-center">
-                    <img src="http://132.1.0.117/organic/wp-content/uploads/2022/06/Avenue-Logo-232x300.png" class="img-fluid " alt="">
+                    <img src="http://132.1.0.117/organic/wp-content/uploads/2022/06/Avenue-Logo-232x300.png" class="img-fluid " alt="Avenue Logo">
                     <p> <strong>Brite Bio</strong></p>
                 </div>
             </div>
