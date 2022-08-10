@@ -9,7 +9,7 @@
                              fertilizer for agriculture and horticulture. Allow us to assist you in reaching your
                              yield
                              potential.</p>
-                         <a type="button" href="<?php echo site_url(); ?>contact-us" class="btn btn-danger text-uppercase px-4 rounded-40"><i class="fa-solid fa-circle-plus"></i>
+                         <a type="button" href="<?php echo site_url(); ?>contact-us" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style"><i class="fa-solid fa-circle-plus"></i>
                              Get In Touch </a>
                      </div>
                  </div>

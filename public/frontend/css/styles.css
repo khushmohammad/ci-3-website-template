@@ -60,7 +60,7 @@
   --bs-body-font-size: 15px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  --bs-body-color: #000;
   --bs-body-bg: #fff;
 }
 
@@ -2997,6 +2997,7 @@ textarea.form-control-lg {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.5;
+  letter-spacing: 1.5px;
   color: #212529;
   text-align: center;
   text-decoration: none;

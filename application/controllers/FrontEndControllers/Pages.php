@@ -102,24 +102,24 @@ class Pages extends CI_Controller
                 ),
 
                 array(
-                    'field' => 'PhoneNumber',
-                    'label' => 'Phone Number',
-                    'rules' => 'required'
+                    'field' => 'DealerName',
+                    'label' => 'Dealer Name',
+                    'rules' => 'required|is_unique[dealer_con.Dealer_Name]'
                 ),
                 array(
                     'field' => 'Email',
                     'label' => 'Email',
-                    'rules' => 'required|valid_email'
+                    'rules' => 'required|valid_email|is_unique[dealer_con.Email]'
                 ),
                 array(
                     'field' => 'PhoneNumber',
                     'label' => 'Phone Number',
-                    'rules' => 'required'
+                    'rules' => 'required|is_unique[dealer_con.Phone_Number]'
                 ),
                 array(
                     'field' => 'LicenseNo',
                     'label' => 'License No',
-                    'rules' => 'required'
+                    'rules' => 'required|is_unique[dealer_con.License_No]'
                 ),
                 array(
                     'field' => 'IssueDate',
@@ -207,9 +207,9 @@ class Pages extends CI_Controller
         $pincode = $_POST['pincode'];
         $data = file_get_contents('http://postalpincode.in/api/pincode/' . $pincode);
         $data = json_decode($data);
-            // echo "<pre>";
-            // echo print_r($data->PostOffice);
-            // die();
+        // echo "<pre>";
+        // echo print_r($data->PostOffice);
+        // die();
         if (isset($data->PostOffice['0'])) {
             $arr['City'] = $data->PostOffice['0']->Taluk;
             $arr['District'] = $data->PostOffice['0']->District;

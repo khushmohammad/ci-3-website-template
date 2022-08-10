@@ -25,7 +25,7 @@
     <link href="<?php echo site_url("public/frontend/") ?>css/custom.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
@@ -36,15 +36,12 @@
 
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <style>
-        @media (min-width: 922px) {
+        @media (min-width: 992px) {
             .container {
                 max-width: 1240px;
+                padding-left: 20px;
+                padding-right: 20px;
             }
-        }
-
-        .container {
-            padding-left: 20px;
-            padding-right: 20px;
         }
     </style>
     <script type="text/javascript">
@@ -76,7 +73,7 @@
         <div class="container">
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
                 <img class="img-fluid" src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Avenue-Logo-232x300.png" alt="..." />
-                Organic</a>
+                Brite Bio</a>
             <button class="navbar-toggler navbar-toggler-right text " type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">

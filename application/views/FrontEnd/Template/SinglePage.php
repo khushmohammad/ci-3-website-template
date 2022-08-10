@@ -1,3 +1,12 @@
+<style>
+    @media (min-width: 992px) {
+
+        #OurGranulated .container {
+            max-width: 840px;
+        }
+
+    }
+</style>
 <section id="OurGranulated">
     <div class="container py-5">
 
@@ -12,9 +21,11 @@
                     <h2>
                         <?php echo  $heading  ?>
                     </h2>
-                    <p>
-                        <?php echo  $content  ?>
-                    </p>
+                    <div class="content-text">
+                        <p>
+                            <?php echo  $content  ?>
+                        </p>
+                    </div>
                 </div>
 
             </div>

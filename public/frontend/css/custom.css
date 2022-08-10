@@ -164,7 +164,18 @@ header.masthead .h1 {
 /*# sourceMappingURL=custom.css.map */
 
 #mainSlider {
-  background-color: #e9e8e6;
+  background-color: #d6d9da;
+}
+
+#mainSlider .owl-theme .owl-dots .owl-dot.active span,
+#mainSlider .owl-theme .owl-dots .owl-dot:hover span {
+  background: #fff;
+}
+
+#mainSlider .owl-theme .owl-dots .owl-dot span {
+  height: 13px;
+  width: 13px;
+  border: 2px solid RGBA(255,255,255,1);
 }
 
 @media (min-width: 768px) {
@@ -217,20 +228,32 @@ header.masthead .h1 {
   padding-bottom: 2rem;
 }
 
-#mainSlider .slide-one {
-  background-color: #e9e8e6;
-}
+
 
 #mainSlider .slide-text h2 {
-  font-weight: bold;
+  font-weight: 600;
+}
+
+@media (min-width:992px) {
+  #mainSlider .slide-text h2 {
+    font-size: 37px;
+  }
 }
 
 #mainSlider .slide-text p {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.6rem;
 }
 
+@media (min-width:992px) {
+  #mainSlider .slide-text p {
+    font-size: 28px;
+  }
+}
 
+#mainSlider .slide-text a {
+  font-weight: 600;
+}
 
 #GrowOrganic .text-style h2,
 #OurGranulated .text-style h2 {
@@ -238,6 +261,7 @@ header.masthead .h1 {
   padding-bottom: 8px;
   font-weight: 500;
   font-size: 37px;
+  margin-bottom: 20px;
 
 }
 
@@ -264,6 +288,11 @@ header.masthead .h1 {
 #RequestConsultation .content p {
 
   line-height: 28px;
+
+}
+
+.content-text {
+  padding-bottom: 20px;
 }
 
 @media (max-width: 700px) {
@@ -394,6 +423,15 @@ header.masthead .h1 {
   align-items: center;
   background: #00000040;
   z-index: 10001;
+
+}
+
+.custom-btn-style {
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 2;
+  /* letter-spacing: 2px; */
 
 }
 

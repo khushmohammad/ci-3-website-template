@@ -163,7 +163,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
             ?>
             <div id="formSuccess" class="alert  alert-success  d-none my-4" role="alert">
             </div>
-            <button type="submit" class="btn bg-danger text-light">Send</button>
+            <button type="submit" class="btn bg-danger text-light">Submit</button>
         </div>
     </div>
 </form>
