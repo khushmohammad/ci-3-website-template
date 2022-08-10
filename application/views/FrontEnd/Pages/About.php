@@ -8,6 +8,8 @@ $data = array(
     "bgImage" => 'about-bg.jpg'
 );
 $this->load->view('FrontEnd/Template/PageHeading', $data);
+
+//echo base_url();
 ?>
 <style>
     @media (min-width: 992px) {
