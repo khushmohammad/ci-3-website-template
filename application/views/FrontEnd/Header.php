@@ -98,6 +98,10 @@
             }
         });
     </script>
+
+    <script>
+        const hostname = window.location.hostname;
+    </script>
 </head>
 
 <body id="page-top">
@@ -116,7 +120,7 @@
     <nav class="navbar navbar-expand-lg  fixed-top py-2 navbar-light text-dark" id="mainNav">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="<?php echo site_url(); ?>">
-                <img class="img-fluid"  src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Avenue-Logo-232x300.png" alt="Avenue Logo" />
+                <img class="img-fluid" src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Avenue-Logo-232x300.png" alt="Avenue Logo" />
                 <p class="m-0 pt-2 ps-2">Brite Bio</p>
             </a>
             <button class="navbar-toggler navbar-toggler-right text " type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>

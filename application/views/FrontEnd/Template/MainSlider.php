@@ -87,6 +87,7 @@
 
 <script>
     $(document).ready(function() {
+      
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 0,
@@ -98,14 +99,15 @@
             animateOut: 'fadeOut',
             //autoHeight: true,           
             //   navContainer: '.custom-nav',
-            autoplay: false,
+            autoplay: hostname == "localhost" || hostname == "132.1.0.117" ? false : true,
             autoplayTimeout: 3000,
             autoplayHoverPause: false,
-            responsive: {
-                0: {
-                    items: 1
-                },
-            }
+            items: 1
+            // responsive: {
+            //     0: {
+            //         items: 1
+            //     },
+            // }
         })
     });
 </script>

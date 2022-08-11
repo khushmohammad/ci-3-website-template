@@ -53,6 +53,15 @@ class DashboardController extends CI_Controller
 		$this->load->view('Backend/Pages/DealerView', $data);
 		$this->load->view('Backend/Footer');
 	}
+	public function enquiries()
+	{
+
+		$data['dealer']  =  $this->db->get('dealer_con')->result_array();
+		$this->load->view('Backend/DashHeader');
+		$this->load->view('Backend/Pages/DealerView', $data);
+		$this->load->view('Backend/Footer');
+	}
+
 
 	public function AddEditDealer($id = "")
 	{
