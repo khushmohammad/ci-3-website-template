@@ -12,7 +12,7 @@ class Pages extends CI_Controller
         $this->load->helper('captcha');
     }
 
-  
+
     public function View($page = null)
     {
         if (!file_exists(APPPATH . 'views/FrontEnd/Pages/' . $page . '.php')) {
@@ -59,9 +59,16 @@ class Pages extends CI_Controller
             $this->session->set_userdata('captchaword', $captchaword);
             //	$this->load->view('index',['captcha_image'=>$image]);
 
+            
+            $cap1 = create_captcha($vals);
+            $image1 = $cap1['image'];
+            $captchaword1 = $cap1['word'];
+
+            $this->session->set_userdata('captchaword1', $captchaword1);
+
 
             $this->load->view('FrontEnd/Header');
-            $this->load->view('FrontEnd/Pages/contact-us', ['captcha_image' => $image]);
+            $this->load->view('FrontEnd/Pages/contact-us', ['captcha_image' => $image, 'enquery_captcha_image' => $image1]);
             $this->load->view('FrontEnd/Footer');
         } else {
             $this->load->view('FrontEnd/Header');
@@ -70,7 +77,7 @@ class Pages extends CI_Controller
         }
     }
 
-    public function SubmitContactForm()
+    public function SubmitRegisterDealer()
     {
         // echo "khush";
         // echo "<pre>";
@@ -215,6 +222,81 @@ class Pages extends CI_Controller
             echo json_encode($arr);
         } else {
             echo 'no';
+        }
+    }
+
+
+    public function SubmitEnqueryForm()
+    {
+        // echo "khush";
+        // echo "<pre>";
+        // echo print_r($_POST);
+        // echo "</pre>";
+        // die();
+
+
+        $captcha = $this->input->post('captcha');
+        $captcha_answer = $this->session->userdata('captchaword1');
+
+        ///check both captcha
+        // echo "<pre>";
+        // echo print_r($_POST);
+        // echo print_r($captcha_answer);
+        // echo "</pre>";
+        // die();
+
+
+
+        if ($captcha == $captcha_answer) {
+            $config = array(
+                array(
+                    'field' => 'Name',
+                    'label' => 'Name',
+                    'rules' => 'required'
+                ),
+
+                array(
+                    'field' => 'Email',
+                    'label' => 'Email',
+                    'rules' => 'required|valid_email|is_unique[enquery.email]'
+                ),
+                array(
+                    'field' => 'PhoneNumber',
+                    'label' => 'Phone Number',
+                    'rules' => 'required|is_unique[enquery.contact]'
+                )
+
+            );
+
+            $this->form_validation->set_rules($config);
+            if ($this->form_validation->run() == FALSE) {
+
+                $errors = validation_errors();
+
+                echo json_encode(['error' => $errors]);
+            } else {
+
+
+
+
+                $data = array(
+                    'name' => $this->input->post('Name'),
+                    'contact' => $this->input->post('PhoneNumber'),
+                    'email' => $this->input->post('Email'),
+                    'message' => $this->input->post('Message'),
+
+
+                );
+
+                if ($this->db->insert('enquery', $data)) {
+                    echo json_encode(['success' => 'Record added successfully.']);
+                } else {
+                    echo json_encode(['error' => 'error']);
+                }
+            }
+        } else {
+            echo json_encode(['error' => 'Captcha does not match.']);
+            $this->session->set_flashdata('error', '<div class="alert alert-danger"></div>');
         }
     }
 }

@@ -56,9 +56,9 @@ class DashboardController extends CI_Controller
 	public function enquiries()
 	{
 
-		$data['dealer']  =  $this->db->get('dealer_con')->result_array();
+		$data['dealer']  =  $this->db->get('enquery')->result_array();
 		$this->load->view('Backend/DashHeader');
-		$this->load->view('Backend/Pages/DealerView', $data);
+		$this->load->view('Backend/Pages/EnqueryView', $data);
 		$this->load->view('Backend/Footer');
 	}
 
@@ -113,7 +113,7 @@ class DashboardController extends CI_Controller
 		$this->load->view('Backend/Pages/DealerAddEdit', $dataGroup);
 		$this->load->view('Backend/Footer');
 	}
-	public function UpdateContactForm($id = "")
+	public function UpdateRegisterDealer($id = "")
 	{
 		// echo "khush";
 		// echo "<pre>";
@@ -266,7 +266,24 @@ class DashboardController extends CI_Controller
 		}
 	}
 
+	public function DeleteEnquery()
+	{
 
+		// echo "<pre>";
+		// echo print_r($_POST);
+		// echo print_r($this->input->post('id'));
+		// echo "</pre>";
+		//die();
+		if ($this->input->post('ID') != "") {
+			$this->db->where('id', $this->input->post('ID'));
+			$this->db->delete('enquery');
+			echo json_encode(['success' => "success"]);
+		} else {
+			echo json_encode(['error' => "error"]);
+		}
+	}
+
+	
 	//END  VIEW DATA  
 	//site user view
 

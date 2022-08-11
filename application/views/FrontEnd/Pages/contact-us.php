@@ -90,8 +90,36 @@ $this->load->view('FrontEnd/Template/PageHeading', $data);
                 </div>
                 <div class="contact-form py-3">
                     <div class="row">
+                        <div class="col-sm-12 RegisterForm EnqueryForm py-3">
+                            <a class="mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnqueryForm" aria-expanded="false" aria-controls="collapseEnqueryForm">
+                                <div class="d-flex align-items-center ">
+                                    <div class="flex-shrink-0">
+                                        <div class="rounded-circle border border-1 text-danger bg-light email">
+                                            <i class="fa-solid fa-id-card"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div>
+                                            <h6 class="m-0">Send Enquery</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <!-- <p class="my-3">After registering, you will receive a Form-O certificate permitting you to sell our fertilizer products.</p> -->
+                            <div class="collapse mt-4" id="collapseEnqueryForm">
+                                <div class="card card-body px-2">
+                                    <?php
+                                    $this->load->view('FrontEnd/Template/EnqueryForm');
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                        </div>
                         <div class="col-sm-12 RegisterForm">
-                            <a class="mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            <a class="mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegisterForm" aria-expanded="false" aria-controls="collapseRegisterForm">
                                 <div class="d-flex align-items-center ">
                                     <div class="flex-shrink-0">
                                         <div class="rounded-circle border border-1 text-danger bg-light email">
@@ -108,10 +136,10 @@ $this->load->view('FrontEnd/Template/PageHeading', $data);
 
                             </a>
                             <!-- <p class="my-3">After registering, you will receive a Form-O certificate permitting you to sell our fertilizer products.</p> -->
-                            <div class="collapse mt-4" id="collapseExample">
+                            <div class="collapse mt-4" id="collapseRegisterForm">
                                 <div class="card card-body px-2">
                                     <?php
-                                    $this->load->view('FrontEnd/Template/ContactForm');
+                                    $this->load->view('FrontEnd/Template/RegisterDealer');
                                     ?>
                                 </div>
                             </div>

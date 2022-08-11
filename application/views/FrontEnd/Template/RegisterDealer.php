@@ -31,7 +31,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
 
 
 ?>
-<form id="ContactForm" method="post">
+<form id="RegisterDealer" method="post">
     <div class="row">
         <div class="col-md-6">
             <div class="mb-3">
@@ -206,7 +206,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
         //  console.log();
         $("#ExpiryDateId").datepicker('setDate', '<?php echo $Expiry_Date; ?>');
 
-        $("#ContactForm").submit(function(e) {
+        $("#RegisterDealer").submit(function(e) {
 
             e.preventDefault();
             let Datasysid = $("#id").val();
@@ -215,9 +215,9 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
 
                 $.ajax({
                     type: "POST",
-                    url: '<?php echo site_url(); ?>BackendControllers/DashboardController/UpdateContactForm/',
+                    url: '<?php echo site_url(); ?>BackendControllers/DashboardController/UpdateRegisterDealer/',
                     dataType: "json",
-                    data: $("#ContactForm").serialize(),
+                    data: $("#RegisterDealer").serialize(),
                     success: function(data) {
                         // console.log(data);
                         if ($.isEmptyObject(data.error)) {
@@ -226,13 +226,13 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                             setTimeout(() => {
                                 $("#formSuccess").addClass('d-none');
                             }, 3000);
-                            // $('#ContactForm')[0].reset();
+                            // $('#RegisterDealer')[0].reset();
 
                         } else {
                             $('#exampleModal').modal('show');
                             $(".print-error-msg").css('display', 'block');
                             $(".print-error-msg").html(data.error);
-                            //  $("#ContactForm :input").css("border-color", "red")
+                            //  $("#RegisterDealer :input").css("border-color", "red")
 
                         }
 
@@ -246,9 +246,9 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
 
                 $.ajax({
                     type: "POST",
-                    url: '<?php echo site_url(); ?>FrontEndControllers/Pages/SubmitContactForm',
+                    url: '<?php echo site_url(); ?>FrontEndControllers/Pages/SubmitRegisterDealer',
                     dataType: "json",
-                    data: $("#ContactForm").serialize(),
+                    data: $("#RegisterDealer").serialize(),
                     success: function(data) {
                         // console.log(data);
                         if ($.isEmptyObject(data.error)) {
@@ -257,13 +257,13 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                             setTimeout(() => {
                                 $("#formSuccess").addClass('d-none');
                             }, 3000);
-                            $('#ContactForm')[0].reset();
+                            $('#RegisterDealer')[0].reset();
 
                         } else {
                             $('#exampleModal').modal('show');
                             $(".print-error-msg").css('display', 'block');
                             $(".print-error-msg").html(data.error);
-                            //  $("#ContactForm :input").css("border-color", "red")
+                            //  $("#RegisterDealer :input").css("border-color", "red")
 
                         }
 
