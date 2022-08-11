@@ -52,7 +52,7 @@ Pin: 311204, Rajasthan - India
 <!-- Footer-->
 <footer class="bg-light py-3">
     <div class="container px-4 px-lg-5">
-        <div class="small text-center text-muted">Copyright &copy; <?php echo date("Y"); ?> - organic</div>
+        <div class="small text-center text-muted">Copyright &copy; <?php echo date("Y"); ?> - Avenue Poultech</div>
     </div>
 </footer>
 <!-- Bootstrap core JS-->

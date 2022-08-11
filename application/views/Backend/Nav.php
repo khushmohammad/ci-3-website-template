@@ -1,7 +1,7 @@
 <div class="sb-nav-fixed">
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="<?php echo site_url("admin"); ?>">Organic</a>
+    <a class="navbar-brand ps-3" href="<?php echo site_url("admin"); ?>">Avenue Poultech</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -41,6 +41,10 @@
           <a class="nav-link" href="<?php echo site_url("admin/users"); ?>">
             <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
             Users
+          </a>
+          <a class="nav-link" href="<?php echo site_url("admin/enquiries"); ?>">
+            <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
+            Enquiries
           </a>
           <a class="nav-link" href="<?php echo site_url("admin/dealer"); ?>">
             <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>

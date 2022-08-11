@@ -121,7 +121,12 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                 </select>
             </div>
         </div>
-
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="District" class="form-label">District</label>
+                <input type="text" class="form-control" value="<?php echo  $District; ?>" name="District" id="District" placeholder="Enter District" readonly>
+            </div>
+        </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="State" class="form-label">State</label>
@@ -135,12 +140,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                 <option value="3">Three</option>
             </select> -->
         </div>
-        <div class="col-md-6">
-            <div class="mb-3">
-                <label for="District" class="form-label">District</label>
-                <input type="text" class="form-control" value="<?php echo  $District; ?>" name="District" id="District" placeholder="Enter District" readonly>
-            </div>
-        </div>
+
 
         <div class="row">
             <div class="col-md-6">
@@ -194,8 +194,8 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
             maxDate: 0
         });
 
-        
-     
+
+
         $("#IssueDate").datepicker("option", "dateFormat", "dd-mm-yy");
         $("#ExpiryDateId").datepicker({
             minDate: 0
@@ -226,7 +226,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                             setTimeout(() => {
                                 $("#formSuccess").addClass('d-none');
                             }, 3000);
-                           // $('#ContactForm')[0].reset();
+                            // $('#ContactForm')[0].reset();
 
                         } else {
                             $('#exampleModal').modal('show');

@@ -73,6 +73,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+// $root=(isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];
+// $root.= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+// echo "<pre>";
+// echo print_r($root);
+
+// if($type == "live"){}
+
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
