@@ -28,7 +28,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
                             fertilizer products are better for the environment as well as for human health. We make
                             certain that we support the global expansion of sustainable agriculture.</p>
                     </div>
-                    <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>Grow-with-organic"><i class="fa-solid fa-circle-plus"></i> Read More </a>
+                    <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>grow-with-organic"><i class="fa-solid fa-circle-plus"></i> Read More </a>
                 </div>
 
             </div>
@@ -58,7 +58,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
                         <p>One important mineral, phosphate, encourages the growth of tissues, the health of all plant cells, and higher agricultural yields. Our goal is to provide customers with a high-quality, organic fertilization solution that is pure, devoid of pollutants, high in accessible phosphorus, and water soluble. Our comprehensive study has shown that our PROM performs best in soils with an acidic or pH-neutral pH, while it can also be used successfully in soils with an alkaline pH when paired with humate, sulfur, or amino. There is also strong evidence that using our PROM in place of some conventional fertilizer applications (Urea or DAP) improves pathogen defense, improves soil health, extends phosphate availability, and decreases soil carbon footprint.</p>
                     </div>
 
-                    <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>Our-granulated"><i class="fa-solid fa-circle-plus"></i> Read More </a>
+                    <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>our-granulated"><i class="fa-solid fa-circle-plus"></i> Read More </a>
 
                 </div>
 
@@ -90,7 +90,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
                         </p>
                     </div>
 
-                    <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>Reduce-carbon"><i class="fa-solid fa-circle-plus"></i> Read More </a>
+                    <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>reduce-carbon"><i class="fa-solid fa-circle-plus"></i> Read More </a>
 
                 </div>
 
@@ -125,7 +125,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
                             The production of our PROM fertilizer begins with the extraction of rock phosphate from Rajasthan, which is well known for its natural mineral resources. Our extensive research and sources with a high total number of available minerals in favorable geographic locations. As an organic fertilizer producer, we make certain that our extraction process yields the most natural rock phosphate suitable for the growing organic industry.
                         </p>
                     </div>
-                    <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>Reliable-organic"><i class="fa-solid fa-circle-plus"></i> Read More </a>
+                    <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>reliable-organic"><i class="fa-solid fa-circle-plus"></i> Read More </a>
 
                 </div>
 
