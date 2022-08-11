@@ -12,18 +12,18 @@ $url = $this->uri->uri_string();
         <div class="row align-items-center">
             <div class="col-sm-4 widget-menu">
                 <div class="list-group text-center">
-                    <a href="'.site_url().'" class=" active">
+                    <a href="' . site_url() . '" class=" active">
                         Home
                     </a>
-                    <a href="'.site_url().'about" class="">About</a>
-                    <a href="'.site_url().'contact-us" class="">Contact Us</a>
+                    <a href="' . site_url() . 'about" class="">About</a>
+                    <a href="' . site_url() . 'contact-us" class="">Contact Us</a>
 
                 </div>
 
             </div>
             <div class="col-sm-4 footer-logo">
                 <div class=" text-center">
-                    <img src="http://132.1.0.117/organic/wp-content/uploads/2022/06/Avenue-Logo-232x300.png" class="img-fluid " alt="Avenue Logo">
+                    <img src="' . site_url("public/frontend/") . 'assets/img/Avenue/Avenue-Logo-232x300.png" class="img-fluid " alt="Avenue Logo">
                     <p> <strong>Brite Bio</strong></p>
                 </div>
             </div>

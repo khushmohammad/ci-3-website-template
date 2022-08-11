@@ -13,9 +13,9 @@ class HomePageController extends CI_Controller
 
     public function index()
     {
-        $this->load->view('FrontEnd/header');
+        $this->load->view('FrontEnd/Header');
         $this->load->view('FrontEnd/index.php');
-        $this->load->view('FrontEnd/footer');
+        $this->load->view('FrontEnd/Footer');
 
     }
 

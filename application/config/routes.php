@@ -64,9 +64,9 @@ $route['admin/logout'] = 'BackendControllers/LoginController/logout';
 
 $route['admin/(:any)'] = 'BackendControllers/DashboardController/$1';
 $route['admin/AddEditDealer/(:any)'] = 'BackendControllers/DashboardController/AddEditDealer/$1';
+$route['generatepdf'] = "welcome/convertpdf";
 
 $route['(:any)'] = 'FrontEndControllers/Pages/View/$1';
-
 
 
 

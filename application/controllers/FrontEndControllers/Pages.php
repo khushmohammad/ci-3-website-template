@@ -12,10 +12,7 @@ class Pages extends CI_Controller
         $this->load->helper('captcha');
     }
 
-    public function index()
-    {
-        $this->load->view('FrontEnd/HomeView');
-    }
+  
     public function View($page = null)
     {
         if (!file_exists(APPPATH . 'views/FrontEnd/Pages/' . $page . '.php')) {
@@ -63,13 +60,13 @@ class Pages extends CI_Controller
             //	$this->load->view('index',['captcha_image'=>$image]);
 
 
-            $this->load->view('FrontEnd/header');
-            $this->load->view('FrontEnd/pages/contact-us', ['captcha_image' => $image]);
-            $this->load->view('FrontEnd/footer');
+            $this->load->view('FrontEnd/Header');
+            $this->load->view('FrontEnd/Pages/contact-us', ['captcha_image' => $image]);
+            $this->load->view('FrontEnd/Footer');
         } else {
-            $this->load->view('FrontEnd/header');
-            $this->load->view('FrontEnd/pages/' . $page);
-            $this->load->view('FrontEnd/footer');
+            $this->load->view('FrontEnd/Header');
+            $this->load->view('FrontEnd/Pages/' . $page);
+            $this->load->view('FrontEnd/Footer');
         }
     }
 
