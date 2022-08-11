@@ -10,7 +10,7 @@
                 <div class="row align-items-center pt-5 pb-5">
                     <div class="col-sm-12 col-xl-4 col-lg-5 slide-text text-lg-start text-center">
                         <h2 class="text-danger">Brite Bio</h2>
-                        <p style="color: #b74039;">Organic Phosphate Fertilizer<br>
+                        <p style="color: #000;">Organic Phosphate Fertilizer<br>
                             for Grain</p>
 
                         <a href="<?php echo site_url(); ?>contact-us" type="button" id="" class="btn btn-danger px-4 py-2 ">Contact Us</a>
@@ -67,7 +67,7 @@
                 <div class="row align-items-center pt-5 pb-5">
                     <div class="col-sm-12 col-xl-4 col-lg-5 slide-text text-lg-start text-center">
                         <h2 class="text-danger">Brite Bio</h2>
-                        <p style="color: #459c25;">Organic Phosphate Fertilizer<br>
+                        <p style="color: #7938b4;">Organic Phosphate Fertilizer<br>
                             for Kitchen Garden</p>
                         <a href="<?php echo site_url(); ?>contact-us" type="button" id="" class="btn btn-danger px-4 py-2">Contact Us</a>
 
