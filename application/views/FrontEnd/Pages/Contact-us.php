@@ -125,7 +125,7 @@ $this->load->view('FrontEnd/Template/PageHeading', $data);
             <div class="col-md-4">
                 <h2 class="pb-4">Find Us</h2>
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28738.084878119356!2d74.384131!3d25.794975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d23fa79b1d5b4f3!2sAvenue%20Poultech!5e0!3m2!1sen!2sus!4v1659795304601!5m2!1sen!2sus" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28738.084878119356!2d74.384131!3d25.794975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d23fa79b1d5b4f3!2sAvenue%20Poultech!5e0!3m2!1sen!2sus!4v1659795304601!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
