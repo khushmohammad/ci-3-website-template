@@ -10,6 +10,21 @@ class Pages extends CI_Controller
     {
         parent::__construct();
         $this->load->helper('captcha');
+
+        $config = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'smtpout.secureserver.net',
+            'smtp_port' => 465,
+            'smtp_user' => 'info@avenuepoultech.com', // change it to yours
+            'smtp_pass' => '', // change it to yours
+            'mailtype' => 'html',
+            'smtp_auth' => true,
+            'smtp_crypto' => 'ssl',
+            'charset' => 'UTF-8',
+            'wordwrap' => TRUE
+        );
+        // $this->load->library('email');
+        $this->email->initialize($config);
     }
 
 
@@ -59,7 +74,7 @@ class Pages extends CI_Controller
             $this->session->set_userdata('captchaword', $captchaword);
             //	$this->load->view('index',['captcha_image'=>$image]);
 
-            
+
             $cap1 = create_captcha($vals);
             $image1 = $cap1['image'];
             $captchaword1 = $cap1['word'];
@@ -297,6 +312,24 @@ class Pages extends CI_Controller
         } else {
             echo json_encode(['error' => 'Captcha does not match.']);
             $this->session->set_flashdata('error', '<div class="alert alert-danger"></div>');
+        }
+    }
+
+
+
+    public  function email_send()
+    {
+        $this->email->from('info@avenuepoultech.com', 'test email');
+        $this->email->to('xifreuhessaula-3142@yopmail.com');
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');
+        //$this->email->send();
+
+        if (!$this->email->send()) {
+            $errors = $this->email->print_debugger();
+            print_r($errors);
+        } else {
+            echo "success";
         }
     }
 }

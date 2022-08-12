@@ -114,9 +114,6 @@ $this->load->view('FrontEnd/Template/PageHeading', $data);
                                     ?>
                                 </div>
                             </div>
-
-
-
                         </div>
                         <div class="col-sm-12 RegisterForm">
                             <a class="mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegisterForm" aria-expanded="false" aria-controls="collapseRegisterForm">
@@ -133,7 +130,6 @@ $this->load->view('FrontEnd/Template/PageHeading', $data);
                                         </div>
                                     </div>
                                 </div>
-
                             </a>
                             <!-- <p class="my-3">After registering, you will receive a Form-O certificate permitting you to sell our fertilizer products.</p> -->
                             <div class="collapse mt-4" id="collapseRegisterForm">
@@ -143,9 +139,6 @@ $this->load->view('FrontEnd/Template/PageHeading', $data);
                                     ?>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
@@ -156,8 +149,6 @@ $this->load->view('FrontEnd/Template/PageHeading', $data);
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28738.084878119356!2d74.384131!3d25.794975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d23fa79b1d5b4f3!2sAvenue%20Poultech!5e0!3m2!1sen!2sus!4v1659795304601!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-
-
         </div>
     </div>
     </div>
