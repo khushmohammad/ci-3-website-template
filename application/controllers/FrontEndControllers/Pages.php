@@ -332,13 +332,27 @@ class Pages extends CI_Controller
         //     echo "success";
         // }
 
-        $msg = "First line of text\nSecond line of text";
+        // $msg = "First line of text\nSecond line of text";
 
-        // use wordwrap() if lines are longer than 70 characters
-        $msg = wordwrap($msg, 70);
+        // // use wordwrap() if lines are longer than 70 characters
+        // $msg = wordwrap($msg, 70);
 
-        // send email
-        if(mail("khush311407@gmail.com", "My subject", $msg)){
+        // // send email
+        // if(mail("khush311407@gmail.com", "My subject", $msg)){
+        //     echo "success";
+        // }
+        // else{
+        //     echo "success";
+
+        // }
+        $to = "xifreuhessaula-3142@yopmail.com";
+        $subject = "My subject";
+        $txt = "Hello world!";
+        $headers = "From: info@avenuepoultech.com" . "\r\n" .
+            "CC: khush311407@gmail.com";
+
+        mail($to, $subject, $txt, $headers);
+        if(mail($to, $subject, $txt, $headers)){
             echo "success";
         }
         else{
