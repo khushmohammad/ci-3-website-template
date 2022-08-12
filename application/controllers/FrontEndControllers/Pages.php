@@ -10,23 +10,6 @@ class Pages extends CI_Controller
     {
         parent::__construct();
         $this->load->helper('captcha');
-
-        // $config = array(
-        //     'protocol' => 'smtp',
-        //     'smtp_host' => 'smtpout.secureserver.net',
-        //     'smtp_port' => 465,
-        //     'smtp_timeout' => 5,
-        //     'smtp_user' => 'info@avenuepoultech.com', // change it to yours
-        //     'smtp_pass' => 'e5bY8eR=C&', // change it to yours
-        //     'mailtype' => 'html',
-        //     'smtp_auth' => true,
-        //     'smtp_crypto' => 'ssl',
-        //     'charset' => 'UTF-8',
-        //     'wordwrap' => TRUE,
-
-        // );
-        // // $this->load->library('email');
-        // $this->email->initialize($config);
     }
 
 
@@ -306,7 +289,7 @@ class Pages extends CI_Controller
                 );
 
                 if ($this->db->insert('enquery', $data)) {
-                    echo json_encode(['success' => 'Record added successfully.']);
+                    echo json_encode(['success' => 'Thank you for getting in touch with us. We received your message and will respond to your inquiry.']);
                 } else {
                     echo json_encode(['error' => 'error']);
                 }
@@ -371,7 +354,47 @@ class Pages extends CI_Controller
         } else {
             echo "success";
         }
+    }
+    public  function testView()
+    {
+        // echo "khush";
+        // echo "<pre>";
+        // echo print_r($_POST);
+        // echo "</pre>";
+        // die();
+        $this->load->view('TestView');
+        //$this->load->view('Email/EnqueyFormEmailTemp');
 
-        
+    }
+    public  function testViewEmail()
+    {
+        echo "khush";
+        echo "<pre>";
+        echo print_r($_POST);
+        echo "</pre>";
+        $data['datad'] = $_POST;
+        $from =  $this->input->post("from") ? $this->input->post("from") : 'info@avenuepoultech.com';
+        $to =  $this->input->post("to") ? $this->input->post("to") : 'xifreuhessaula-3142@yopmail.com';
+        $cc =  $this->input->post("cc") ? $this->input->post("cc") : 'info@avenuepoultech.com';
+        $subject =  $this->input->post("subject") ? $this->input->post("subject") : 'test Email enquery';
+        $message =  $this->input->post("message") ? $this->input->post("message") : $this->load->view('Email/EnqueyFormEmailTemp',  $data);
+        //$extra =  $this->input->post("extra") ? $this->input->post("extra") : 'info@avenuepoultech.com';
+        //  $extra1 =  $this->input->post("extra1") ? $this->input->post("extra1") : 'info@avenuepoultech.com';
+      
+        //$this->load->view('Email/EnqueyFormEmailTemp', $data);
+
+
+        //$emailTemp = $this->load->view('Email/EnqueyFormEmailTemp');
+        $this->email->from($from, 'Avenue Poultech');
+        $this->email->to($to);
+        $this->email->cc($cc);
+        $this->email->subject($subject);
+        $this->email->message($$message);
+        if (!$this->email->send()) {
+            $errors = $this->email->print_debugger();
+            print_r($errors);
+        } else {
+            echo "success";
+        }
     }
 }
