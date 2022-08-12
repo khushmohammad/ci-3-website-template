@@ -18,7 +18,7 @@ class Pages extends CI_Controller
             'smtp_user' => 'info@avenuepoultech.com', // change it to yours
             'smtp_pass' => '', // change it to yours
             'mailtype' => 'html',
-            'smtp_auth' => true,
+            //'smtp_auth' => true,
             'smtp_crypto' => 'ssl',
             'charset' => 'UTF-8',
             'wordwrap' => TRUE
