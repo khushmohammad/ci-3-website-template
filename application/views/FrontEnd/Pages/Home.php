@@ -55,7 +55,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
                 <div class="text-style text-center text-md-start">
                     <h2 class="d-none d-md-block">Our Granulated PROM Fertilizer</h2>
                     <div class="content-text">
-                        <p>One important mineral, phosphate, encourages the growth of tissues, the health of all plant cells, and higher agricultural yields. Our goal is to provide customers with a high-quality, organic fertilization solution that is pure, devoid of pollutants, high in accessible phosphorus, and water soluble. Our comprehensive study has shown that our PROM performs best in soils with an acidic or pH-neutral pH, while it can also be used successfully in soils with an alkaline pH when paired with humate, sulfur, or amino. There is also strong evidence that using our PROM in place of some conventional fertilizer applications (Urea or DAP) improves pathogen defense, improves soil health, extends phosphate availability, and decreases soil carbon footprint.</p>
+                        <p>One important mineral, phosphate, encourages the growth of tissues, the health of all plant cells, and higher agricultural yields. Our goal is to provide customers with a high-quality, organic fertilization solution that is pure, devoid of pollutants, high in accessible phosphorus, and water soluble. Our comprehensive study has shown that BRITE BIO PROM performs best in soils with an acidic or pH-neutral pH, while it can also be used successfully in soils with an alkaline pH when paired with humate, sulfur, or amino. There is also strong evidence that using BRITE BIO PROM in place of other conventional fertilizer applications (Urea or DAP) improves pathogen defense, improves soil health, extends phosphate availability, and decreases soil carbon footprint.</p>
                     </div>
 
                     <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>our-granulated"><i class="fa-solid fa-circle-plus"></i> Read More </a>
@@ -86,7 +86,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
 
                         </p>
                         <p>
-                            Our Brite Bio PROM fertilizer is made simply by crushing, screening, granulating, packing, and transporting natural materials. Comparing our production process to that of traditional phosphate fertilizers, we release around 8 times less CO2 into the atmosphere.
+                            Our BRITE BIO PROM fertilizer is made by crushing, screening, granulating, packing, and transporting natural materials. Comparing our production process to that of traditional phosphate fertilizers, we release 8 times less CO2 into the atmosphere.
                         </p>
                     </div>
 
@@ -122,7 +122,7 @@ $this->load->view('FrontEnd/Template/MainSlider');
 
                     <div class="content-text">
                         <p>
-                            The production of our PROM fertilizer begins with the extraction of rock phosphate from Rajasthan, which is well known for its natural mineral resources. Our extensive research and sources with a high total number of available minerals in favorable geographic locations. As an organic fertilizer producer, we make certain that our extraction process yields the most natural rock phosphate suitable for the growing organic industry.
+                            The production of our PROM fertilizer begins with the extraction of rock phosphate from Rajasthan, which is well known for its natural mineral resources. With our extensive research and sources with a high total number of available minerals in favorable geographic locations, as an organic fertilizer producer, we make certain that our extraction process yields the most natural rock phosphate suitable for the growing organic industry.
                         </p>
                     </div>
                     <a type="button" class="btn btn-danger text-uppercase  py-2 px-4 rounded-40 custom-btn-style" href="<?php echo site_url(); ?>reliable-organic"><i class="fa-solid fa-circle-plus"></i> Read More </a>
