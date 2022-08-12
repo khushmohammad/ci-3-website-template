@@ -372,12 +372,12 @@ class Pages extends CI_Controller
         echo "<pre>";
         echo print_r($_POST);
         echo "</pre>";
-        $data['datad'] = $_POST;
+        
         $from =  $this->input->post("from") ? $this->input->post("from") : 'info@avenuepoultech.com';
         $to =  $this->input->post("to") ? $this->input->post("to") : 'xifreuhessaula-3142@yopmail.com';
         $cc =  $this->input->post("cc") ? $this->input->post("cc") : 'info@avenuepoultech.com';
         $subject =  $this->input->post("subject") ? $this->input->post("subject") : 'test Email enquery';
-        $message =  $this->input->post("message") ? $this->input->post("message") : $this->load->view('Email/EnqueyFormEmailTemp',  $data);
+        $message =  $this->input->post("message") ? $this->input->post("message") : $this->load->view('Email/EnqueyFormEmailTemp');
         //$extra =  $this->input->post("extra") ? $this->input->post("extra") : 'info@avenuepoultech.com';
         //  $extra1 =  $this->input->post("extra1") ? $this->input->post("extra1") : 'info@avenuepoultech.com';
       
