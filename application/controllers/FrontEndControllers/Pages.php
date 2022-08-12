@@ -352,12 +352,26 @@ class Pages extends CI_Controller
             "CC: khush311407@gmail.com";
 
         mail($to, $subject, $txt, $headers);
-        if(mail($to, $subject, $txt, $headers)){
+        if (mail($to, $subject, $txt, $headers)) {
+            echo "success";
+        } else {
             echo "success";
         }
-        else{
-            echo "success";
+    }
 
+    public  function email_send1()
+    {
+        $this->email->from('info@avenuepoultech.com', 'test email');
+        $this->email->to('xifreuhessaula-3142@yopmail.com');
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');
+        if (!$this->email->send()) {
+            $errors = $this->email->print_debugger();
+            print_r($errors);
+        } else {
+            echo "success";
         }
+
+        
     }
 }
