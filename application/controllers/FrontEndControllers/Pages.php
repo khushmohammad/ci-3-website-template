@@ -11,22 +11,22 @@ class Pages extends CI_Controller
         parent::__construct();
         $this->load->helper('captcha');
 
-        $config = array(
-            'protocol' => 'smtp',
-            'smtp_host' => 'smtpout.secureserver.net',
-            'smtp_port' => 465,
-            'smtp_timeout' => 5,
-            'smtp_user' => 'info@avenuepoultech.com', // change it to yours
-            'smtp_pass' => 'e5bY8eR=C&', // change it to yours
-            'mailtype' => 'html',
-            'smtp_auth' => true,
-            'smtp_crypto' => 'ssl',
-            'charset' => 'UTF-8',
-            'wordwrap' => TRUE,
+        // $config = array(
+        //     'protocol' => 'smtp',
+        //     'smtp_host' => 'smtpout.secureserver.net',
+        //     'smtp_port' => 465,
+        //     'smtp_timeout' => 5,
+        //     'smtp_user' => 'info@avenuepoultech.com', // change it to yours
+        //     'smtp_pass' => 'e5bY8eR=C&', // change it to yours
+        //     'mailtype' => 'html',
+        //     'smtp_auth' => true,
+        //     'smtp_crypto' => 'ssl',
+        //     'charset' => 'UTF-8',
+        //     'wordwrap' => TRUE,
 
-        );
-        // $this->load->library('email');
-        $this->email->initialize($config);
+        // );
+        // // $this->load->library('email');
+        // $this->email->initialize($config);
     }
 
 
@@ -321,14 +321,29 @@ class Pages extends CI_Controller
 
     public  function email_send()
     {
-        $this->email->from('info@avenuepoultech.com', 'test email');
-        $this->email->to('xifreuhessaula-3142@yopmail.com');
-        $this->email->subject('Email Test');
-        $this->email->message('Testing the email class.');
-        $this->email->send();
+        // $this->email->from('info@avenuepoultech.com', 'test email');
+        // $this->email->to('xifreuhessaula-3142@yopmail.com');
+        // $this->email->subject('Email Test');
+        // $this->email->message('Testing the email class.');
+        // if (!$this->email->send()) {
+        //     $errors = $this->email->print_debugger();
+        //     print_r($errors);
+        // } else {
+        //     echo "success";
+        // }
 
+        $msg = "First line of text\nSecond line of text";
 
-        $errors = $this->email->print_debugger();
-        print_r($errors);
+        // use wordwrap() if lines are longer than 70 characters
+        $msg = wordwrap($msg, 70);
+
+        // send email
+        if(mail("khush311407@gmail.com", "My subject", $msg)){
+            echo "success";
+        }
+        else{
+            echo "success";
+
+        }
     }
 }
