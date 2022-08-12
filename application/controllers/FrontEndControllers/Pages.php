@@ -372,24 +372,30 @@ class Pages extends CI_Controller
         echo "<pre>";
         echo print_r($_POST);
         echo "</pre>";
-        
+        $emailTemp = $this->load->view('Email/EnqueyFormEmailTemp', '', true);
         $from =  $this->input->post("from") ? $this->input->post("from") : 'info@avenuepoultech.com';
         $to =  $this->input->post("to") ? $this->input->post("to") : 'xifreuhessaula-3142@yopmail.com';
         $cc =  $this->input->post("cc") ? $this->input->post("cc") : 'info@avenuepoultech.com';
         $subject =  $this->input->post("subject") ? $this->input->post("subject") : 'test Email enquery';
-        $message =  $this->input->post("message") ? $this->input->post("message") : $this->load->view('Email/EnqueyFormEmailTemp');
+        $message =  $this->input->post("message") ? $this->input->post("message") : $emailTemp;
         //$extra =  $this->input->post("extra") ? $this->input->post("extra") : 'info@avenuepoultech.com';
         //  $extra1 =  $this->input->post("extra1") ? $this->input->post("extra1") : 'info@avenuepoultech.com';
-      
+
         //$this->load->view('Email/EnqueyFormEmailTemp', $data);
 
+        $config = array(
+            'charset' => 'utf-8',
+            'wordwrap' => TRUE,
+            'mailtype' => 'html'
+        );
 
-        //$emailTemp = $this->load->view('Email/EnqueyFormEmailTemp');
+        $this->email->initialize($config);        
+
         $this->email->from($from, 'Avenue Poultech');
+
         $this->email->to($to);
         $this->email->cc($cc);
         $this->email->subject($subject);
-        $this->email->set_mailtype("html");
         $this->email->message($message);
         if (!$this->email->send()) {
             $errors = $this->email->print_debugger();
