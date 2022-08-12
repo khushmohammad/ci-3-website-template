@@ -389,6 +389,7 @@ class Pages extends CI_Controller
         $this->email->to($to);
         $this->email->cc($cc);
         $this->email->subject($subject);
+        $this->email->set_mailtype("html");
         $this->email->message($message);
         if (!$this->email->send()) {
             $errors = $this->email->print_debugger();
