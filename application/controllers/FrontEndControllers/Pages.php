@@ -19,9 +19,10 @@ class Pages extends CI_Controller
             'smtp_pass' => 'e5bY8eR=C&', // change it to yours
             'mailtype' => 'html',
             //'smtp_auth' => true,
-            'smtp_crypto' => 'ssl',
+            'smtp_crypto' => 'tls',
             'charset' => 'UTF-8',
-            'wordwrap' => TRUE
+            'wordwrap' => TRUE,
+            
         );
         // $this->load->library('email');
         $this->email->initialize($config);
@@ -323,13 +324,11 @@ class Pages extends CI_Controller
         $this->email->to('xifreuhessaula-3142@yopmail.com');
         $this->email->subject('Email Test');
         $this->email->message('Testing the email class.');
-        //$this->email->send();
+        $this->email->send();
 
-        if (!$this->email->send()) {
+        
             $errors = $this->email->print_debugger();
             print_r($errors);
-        } else {
-            echo "success";
-        }
+       
     }
 }
