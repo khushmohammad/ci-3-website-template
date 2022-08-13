@@ -161,7 +161,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
             <?php
             echo $id != "" ? "<input type='hidden' name='id' id='id' value=" . $id . " required>" : "";
             ?>
-            <div id="formSuccess" class="alert  alert-success  d-none my-4" role="alert">
+            <div id="RegisterformSuccess" class="alert  alert-success  d-none my-4" role="alert">
             </div>
             <button type="submit" class="btn bg-danger text-light">Submit</button>
         </div>
@@ -224,10 +224,10 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                             $(".print-error-msg").css('display', 'none');
 
                             setTimeout(() => {
-                                $("#formSuccess").removeClass('d-none').html(data.success);
+                                $("#RegisterformSuccess").removeClass('d-none').html(data.success);
                             }, 200);
                             setTimeout(() => {
-                                $("#formSuccess").addClass('d-none');
+                                $("#RegisterformSuccess").addClass('d-none');
                             }, 3000);
                             // $('#RegisterDealer')[0].reset();
 
@@ -257,9 +257,9 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                         // console.log(data);
                         if ($.isEmptyObject(data.error)) {
                             $(".print-error-msg").css('display', 'none');
-                            $("#formSuccess").removeClass('d-none').html(data.success);
+                            $("#RegisterformSuccess").removeClass('d-none').html(data.success);
                             setTimeout(() => {
-                                $("#formSuccess").addClass('d-none');
+                                $("#RegisterformSuccess").addClass('d-none');
                             }, 6000);
                             //  $('#RegisterDealer')[0].reset();
 
