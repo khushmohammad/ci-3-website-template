@@ -303,7 +303,6 @@ class Pages extends CI_Controller
 
 
                 if ($this->db->insert('enquery', $data)) {
-                    echo json_encode(['success' => 'Thank you for getting in touch with us. We received your message and will respond to your inquiry.']);
                     $this->sendEnqueryEmail($data);
                 } else {
                     echo json_encode(['error' => 'error']);
@@ -341,7 +340,9 @@ class Pages extends CI_Controller
         if (!$this->email->send()) {
             $errors = $this->email->print_debugger();
             print_r($errors);
-        } 
+        } else {
+            echo json_encode(['success' => 'Thank you for getting in touch with us. We received your message and will respond to your inquiry.']);
+        }
     }
 
     public  function email_send()
@@ -404,9 +405,8 @@ class Pages extends CI_Controller
         // echo print_r($_POST);
         // echo "</pre>";
         // die();
-       // $this->load->view('TestView');
+        // $this->load->view('TestView');
         $this->load->view('Email/EnqueyFormEmailTemp');
-
     }
     public  function testViewEmail()
     {
