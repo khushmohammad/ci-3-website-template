@@ -294,7 +294,7 @@ class Pages extends CI_Controller
 
 
         $data['UserData'] = $postData;
-        $this->load->view('Email/' . $template, $data);
+       // $this->load->view('Email/' . $template, $data);
 
 
         $emailTemp = $this->load->view('Email/' . $template,  $data, true);

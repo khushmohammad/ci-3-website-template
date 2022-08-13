@@ -254,7 +254,7 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                                                 </tr>
                                                 <tr style="" bgcolor="#f2f2f2">
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">License No</td>
-                                                  <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $Phone_Number; ?></td>
+                                                  <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $License_No; ?></td>
                                                 </tr>
                                                 <tr>
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">License Issue By</td>
