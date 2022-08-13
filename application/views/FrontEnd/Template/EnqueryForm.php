@@ -105,7 +105,7 @@
                 dataType: "json",
                 data: $("#EnqueryForm").serialize(),
                 success: function(data) {
-                    // console.log(data);
+
                     if ($.isEmptyObject(data.error)) {
                         $(".print-error-msg").css('display', 'none');
                         $("#formSuccess").removeClass('d-none').html(data.success);

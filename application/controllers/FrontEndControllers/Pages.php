@@ -91,19 +91,8 @@ class Pages extends CI_Controller
         // echo print_r($_POST);
         // echo "</pre>";
 
-
         $captcha = $this->input->post('captcha');
         $captcha_answer = $this->session->userdata('captchaword');
-
-        ///check both captcha
-        // echo "<pre>";
-        // echo print_r($_POST);
-        // echo print_r($captcha_answer);
-        // echo "</pre>";
-        // die();
-
-
-
         if ($captcha == $captcha_answer) {
             $config = array(
                 array(
@@ -177,14 +166,9 @@ class Pages extends CI_Controller
 
             $this->form_validation->set_rules($config);
             if ($this->form_validation->run() == FALSE) {
-
                 $errors = validation_errors();
-
                 echo json_encode(['error' => $errors]);
             } else {
-
-
-
 
                 $data = array(
                     'Dealer_Name' => $this->input->post('DealerName'),
@@ -200,9 +184,11 @@ class Pages extends CI_Controller
                     'License_Issue_by' => $this->input->post('LicenseIssueBy'),
                     'Pincode' => $this->input->post('Pincode')
                 );
+                //$this->sendEnqueryEmail($data['Email'], $data, 'RegisterDealerFormEmailTemp', 'Thank you for registering as Dealer with us');
 
                 if ($this->db->insert('dealer_con', $data)) {
-                    echo json_encode(['success' => 'Record added successfully.']);
+                    echo json_encode(['success' => 'Thank you for getting in touch with us. We received your message and will respond to your inquiry.']);
+                    $this->sendEnqueryEmail($data['Email'], $data, 'RegisterDealerFormEmailTemp', 'Thank you for registering as Dealer with us');
                 } else {
                     echo json_encode(['error' => 'error']);
                 }
@@ -212,6 +198,8 @@ class Pages extends CI_Controller
             $this->session->set_flashdata('error', '<div class="alert alert-danger"></div>');
         }
     }
+
+
 
     public function getAddress()
     {
@@ -235,25 +223,8 @@ class Pages extends CI_Controller
 
     public function SubmitEnqueryForm()
     {
-        // echo "khush";
-        // echo "<pre>";
-        // echo print_r($_POST);
-        // echo "</pre>";
-
-        // die();
-
-
         $captcha = $this->input->post('captcha');
         $captcha_answer = $this->session->userdata('captchaword1');
-
-        ///check both captcha
-        // echo "<pre>";
-        // echo print_r($_POST);
-        // echo print_r($captcha_answer);
-        // echo "</pre>";
-        // die();
-
-
 
         if ($captcha == $captcha_answer) {
             $config = array(
@@ -289,21 +260,16 @@ class Pages extends CI_Controller
                 echo json_encode(['error' => $errors]);
             } else {
 
-
-
-
                 $data = array(
                     'name' => $this->input->post('Name'),
                     'contact' => $this->input->post('PhoneNumber'),
                     'email' => $this->input->post('Email'),
                     'message' => $this->input->post('Message'),
-
-
                 );
 
-
                 if ($this->db->insert('enquery', $data)) {
-                    $this->sendEnqueryEmail($data);
+                    echo json_encode(['success' => 'Thank you for getting in touch with us. We received your message and will respond to your inquiry.']);
+                    $this->sendEnqueryEmail($data['email'], $data, 'EnqueyFormEmailTemp', 'Thank you for getting in touch with us');
                 } else {
                     echo json_encode(['error' => 'error']);
                 }
@@ -314,22 +280,28 @@ class Pages extends CI_Controller
         }
     }
 
-    public function sendEnqueryEmail($postData = "")
+    public function sendEnqueryEmail($to, $postData = "", $template = "", $subject = "")
     {
         // echo "<pre>";
         // echo print_r($postData);
 
-        // echo  $postData['name'];
-        // die();
-        $data['UserData'] = $postData;
-        //  $this->load->view('Email/EnqueyFormEmailTemp', $data);
+        // echo  $to;
+        // echo  $template;
+        // echo  $subject;
         // die();
 
-        $emailTemp = $this->load->view('Email/EnqueyFormEmailTemp',  $data, true);
+
+
+
+        $data['UserData'] = $postData;
+        $this->load->view('Email/' . $template, $data);
+
+
+        $emailTemp = $this->load->view('Email/' . $template,  $data, true);
         $from = 'info@avenuepoultech.com';
-        $to =  $postData['email'];
+        // $to =  $postData['email'];
         $cc =   'info@avenuepoultech.com';
-        $subject =  'Thank you for getting in touch with us';
+        $subject =  $subject;
         //$message =  $postData['message'] ? $postData['message'] : $emailTemp;
 
         $this->email->from($from, 'Avenue Poultech');
@@ -338,10 +310,10 @@ class Pages extends CI_Controller
         $this->email->subject($subject);
         $this->email->message($emailTemp);
         if (!$this->email->send()) {
-            $errors = $this->email->print_debugger();
-            print_r($errors);
+
+            return false;
         } else {
-            echo json_encode(['success' => 'Thank you for getting in touch with us. We received your message and will respond to your inquiry.']);
+            return true;
         }
     }
 
@@ -406,7 +378,8 @@ class Pages extends CI_Controller
         // echo "</pre>";
         // die();
         // $this->load->view('TestView');
-        $this->load->view('Email/EnqueyFormEmailTemp');
+        // $this->load->view('Email/EnqueyFormEmailTemp');
+        $this->load->view('Email/RegisterDealerFormEmailTemp');
     }
     public  function testViewEmail()
     {
