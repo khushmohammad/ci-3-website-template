@@ -222,7 +222,10 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                         // console.log(data);
                         if ($.isEmptyObject(data.error)) {
                             $(".print-error-msg").css('display', 'none');
-                            $("#formSuccess").removeClass('d-none').html(data.success);
+
+                            setTimeout(() => {
+                                $("#formSuccess").removeClass('d-none').html(data.success);
+                            }, 200);
                             setTimeout(() => {
                                 $("#formSuccess").addClass('d-none');
                             }, 3000);
@@ -257,11 +260,12 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                             $("#formSuccess").removeClass('d-none').html(data.success);
                             setTimeout(() => {
                                 $("#formSuccess").addClass('d-none');
-                            }, 3000);
-                          //  $('#RegisterDealer')[0].reset();
+                            }, 6000);
+                            //  $('#RegisterDealer')[0].reset();
 
                         } else {
                             $('#RegisterErrorModal').modal('show');
+                            $("#RegisterErrorModal").css('display', 'block');
                             $(".print-error-msg").css('display', 'block');
                             $(".print-error-msg").html(data.error);
                             //  $("#RegisterDealer :input").css("border-color", "red")
