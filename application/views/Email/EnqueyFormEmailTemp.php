@@ -7,7 +7,7 @@
 
 $name = empty($UserData['name']) ? "name" :  $UserData['name'];
 $message = empty($UserData['message']) ? "message" :  $UserData['message'];
-
+$logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
@@ -279,7 +279,7 @@ $message = empty($UserData['message']) ? "message" :  $UserData['message'];
                               <tbody>
                                 <tr>
                                   <td class="col-12 p-2 text-center" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; width: 100%; margin: 0; padding: 8px 24px 8px 8px;" align="center" valign="top">
-                                    <img class="w-24" src="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Avenue-Logo-232x300.png" alt="logo" style="height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; width: 50px; border-style: none; border-width: 0;" width="50">
+                                    <img class="w-24" src="<?php echo $logo; ?>" alt="logo" style="height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; width: 50px; border-style: none; border-width: 0;" width="50">
                                     <p class="text-center" style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="center">Avenue Poultech</p>
                                   </td>
                                 </tr>

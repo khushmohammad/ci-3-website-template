@@ -17,6 +17,8 @@ $Expiry_Date = empty($UserData['Expiry_Date']) ? "" : $UserData['Expiry_Date'];
 $License_Issue_by = empty($UserData['License_Issue_by']) ? "" : $UserData['License_Issue_by'];
 $Pincode = empty($UserData['Pincode']) ? "" : $UserData['Pincode'];
 
+$logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
+
 //die();
 
 
@@ -349,7 +351,7 @@ $Pincode = empty($UserData['Pincode']) ? "" : $UserData['Pincode'];
                                       <tbody>
                                         <tr>
                                           <td class="col-12 p-2 text-center" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; width: 100%; margin: 0; padding: 8px 24px 8px 8px;" align="center" valign="top">
-                                            <img class="w-12 img-fluid" src="http://132.1.0.117/org/public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png" alt="logo" style="height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; max-width: 100%; width: 48px; border-style: none; border-width: 0;" width="48">
+                                            <img class="w-12 img-fluid" src="<?php echo $logo; ?>" alt="logo" style="height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; max-width: 100%; width: 48px; border-style: none; border-width: 0;" width="48">
                                             <p class="text-center" style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="center">Avenue Poultech</p>
                                           </td>
                                         </tr>
