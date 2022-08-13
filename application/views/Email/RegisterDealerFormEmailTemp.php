@@ -179,12 +179,12 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                             <tbody>
                               <tr>
                                 <td style="line-height: 24px; font-size: 16px; padding-top: 20px; margin: 0;" align="left">
-                                  <div class="row" style="margin-right: -24px;">
+                                  <div class="row" >
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" align="left" valign="top">
-                                            <h6 style="padding-top: 0; padding-bottom: 0; font-weight: 500; vertical-align: baseline; font-size: 16px; line-height: 19.2px; margin: 0;" align="left">Hello Name,</h6>
+                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 100%; margin: 0;" align="left" valign="top">
+                                            <h6 style="padding-top: 0; padding-bottom: 0; font-weight: 500; vertical-align: baseline; font-size: 16px; line-height: 19.2px; margin: 0;" align="left">Hello <?php echo $Dealer_Name; ?>,</h6>
                                           </td>
                                         </tr>
                                       </tbody>
@@ -207,11 +207,11 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                             <tbody>
                               <tr>
                                 <td style="line-height: 24px; font-size: 16px; padding-top: 20px; margin: 0;" align="left">
-                                  <div class="row" style="margin-right: -24px;">
+                                  <div class="row" >
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" align="left" valign="top">
+                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 100%; margin: 0;" align="left" valign="top">
                                             <div class="">
                                               <p style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="left">Thank you for registering as Dealer with us. We have received your information as</p>
                                             </div>
@@ -237,14 +237,14 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                             <tbody>
                               <tr>
                                 <td style="line-height: 24px; font-size: 16px; padding-top: 20px; margin: 0;" align="left">
-                                  <div class="row" style="margin-right: -24px;">
+                                  <div class="row" >
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="col-8" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 66.666667%; margin: 0;" align="left" valign="top">
+                                          <td class="col-8" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 66.666667%; margin: 0;" align="left" valign="top">
                                             <table class="table table-striped " border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 100%;">
                                               <tbody>
-                                                <tr style="" bgcolor="#f2f2f2">
+                                                <tr  bgcolor="#f2f2f2">
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">Dealer Name</td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"> <?php echo $Dealer_Name; ?> </td>
                                                 </tr>
@@ -252,7 +252,7 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">Phone Number</td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $Phone_Number; ?> </td>
                                                 </tr>
-                                                <tr style="" bgcolor="#f2f2f2">
+                                                <tr  bgcolor="#f2f2f2">
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">License No</td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $License_No; ?></td>
                                                 </tr>
@@ -260,7 +260,7 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">License Issue By</td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $License_Issue_by; ?> </td>
                                                 </tr>
-                                                <tr style="" bgcolor="#f2f2f2">
+                                                <tr  bgcolor="#f2f2f2">
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">Issue Date</td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $Issue_Date; ?></td>
                                                 </tr>
@@ -268,7 +268,7 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">Expiry Date</td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $Expiry_Date; ?> </td>
                                                 </tr>
-                                                <tr style="" bgcolor="#f2f2f2">
+                                                <tr  bgcolor="#f2f2f2">
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">Email </td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $Email; ?></td>
                                                 </tr>
@@ -276,7 +276,7 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">Address </td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $Address; ?> </td>
                                                 </tr>
-                                                <tr style="" bgcolor="#f2f2f2">
+                                                <tr  bgcolor="#f2f2f2">
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">Pin code</td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $Pincode; ?></td>
                                                 </tr>
@@ -284,7 +284,7 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">City/Village</td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $City; ?> </td>
                                                 </tr>
-                                                <tr style="" bgcolor="#f2f2f2">
+                                                <tr  bgcolor="#f2f2f2">
                                                   <td class="border-0 text-black" style="line-height: 24px; font-size: 16px; color: #000000; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top">District</td>
                                                   <td class="border-0 text-gray-700" style="line-height: 24px; font-size: 16px; color: #4a5568; margin: 0; padding: 12px; border: 0px solid #e2e8f0;" align="left" valign="top"><?php echo $District; ?></td>
                                                 </tr>
@@ -316,11 +316,11 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                             <tbody>
                               <tr>
                                 <td style="line-height: 24px; font-size: 16px; padding-top: 24px; margin: 0;" align="left">
-                                  <div class="row" style="margin-right: -24px;">
+                                  <div class="row" >
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" align="left" valign="top">
+                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 100%; margin: 0;" align="left" valign="top">
                                             <div class="">
                                               <p style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="left">We will process for Form-O and send you shortly with a PDF..</p>
                                             </div>
@@ -346,7 +346,7 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                             <tbody>
                               <tr>
                                 <td style="line-height: 24px; font-size: 16px; padding-top: 24px; margin: 0;" align="left">
-                                  <div class="row" style="margin-right: -24px;">
+                                  <div class="row" >
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
@@ -362,11 +362,11 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                               </tr>
                             </tbody>
                           </table>
-                          <div class="row" style="margin-right: -24px;">
+                          <div class="row" >
                             <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                               <tbody>
                                 <tr>
-                                  <td class="col-12 text-cente" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" align="left" valign="top">
+                                  <td class="col-12 text-cente" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 100%; margin: 0;" align="left" valign="top">
                                     <p class="text-center" style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="center">
                                       Village: Jagpura, Tehsil: Badnor,
                                       Block: Asind, District: Bhilwara,

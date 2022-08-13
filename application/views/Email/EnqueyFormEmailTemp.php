@@ -155,11 +155,11 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                             <tbody>
                               <tr>
                                 <td style="line-height: 24px; font-size: 16px; padding-top: 20px; margin: 0;" align="left">
-                                  <div class="row" style="margin-right: -24px;">
+                                  <div class="row" >
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" align="left" valign="top">
+                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 100%; margin: 0;" align="left" valign="top">
                                             <div class="">
                                               <h6 style="padding-top: 0; padding-bottom: 0; font-weight: 500; vertical-align: baseline; font-size: 16px; line-height: 19.2px; margin: 0;" align="left">Hello <?php echo $name; ?>,</h6>
                                             </div>
@@ -185,11 +185,11 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                             <tbody>
                               <tr>
                                 <td style="line-height: 24px; font-size: 16px; padding-top: 20px; margin: 0;" align="left">
-                                  <div class="row" style="margin-right: -24px;">
+                                  <div class="row" >
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" align="left" valign="top">
+                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 100%; margin: 0;" align="left" valign="top">
                                             <div class="">
                                               <p style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="left">Thank you for getting in touch with us. We received your message</p>
                                             </div>
@@ -215,11 +215,11 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                             <tbody>
                               <tr>
                                 <td style="line-height: 24px; font-size: 16px; padding-top: 20px; margin: 0;" align="left">
-                                  <div class="row" style="margin-right: -24px;">
+                                  <div class="row" >
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="col-12" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" valign="top">
+                                          <td class="col-12" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 100%; margin: 0;" valign="top">
                                             <table class="p-4" role="presentation" border="0" cellpadding="0" cellspacing="0">
                                               <tbody>
                                                 <tr>
@@ -257,11 +257,11 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                             <tbody>
                               <tr>
                                 <td style="line-height: 24px; font-size: 16px; padding-top: 20px; margin: 0;" align="left">
-                                  <div class="row" style="margin-right: -24px;">
+                                  <div class="row" >
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" align="left" valign="top">
+                                          <td class="col-12 test-start" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 100%; margin: 0;" align="left" valign="top">
                                             <div class="">
                                               <p style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="left">We will respond to your inquiry.</p>
                                             </div>
@@ -274,7 +274,7 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                               </tr>
                             </tbody>
                           </table>
-                          <div class="row" style="margin-right: -24px;">
+                          <div class="row" >
                             <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                               <tbody>
                                 <tr>
@@ -286,11 +286,11 @@ $logo = site_url("public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png");
                               </tbody>
                             </table>
                           </div>
-                          <div class="row" style="margin-right: -24px;">
+                          <div class="row" >
                             <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                               <tbody>
                                 <tr>
-                                  <td class="col-12 text-cente" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" align="left" valign="top">
+                                  <td class="col-12 text-cente" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal;  width: 100%; margin: 0;" align="left" valign="top">
                                     <p class="text-center" style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="center">
                                       Village: Jagpura, Tehsil: Badnor,
                                       Block: Asind, District: Bhilwara,
