@@ -1,12 +1,12 @@
 <?php
-    // $url = $this->uri->uri_string();
+// $url = $this->uri->uri_string();
 
-    // echo "<pre>";
-    // echo print_r($_SESSION);
-    // echo "</pre>";
+// echo "<pre>";
+// echo print_r($_SESSION);
+// echo "</pre>";
 
 
-    ?>
+?>
 <form id="EnqueryForm" method="post">
     <div class="row">
         <div class="col-md-12">
@@ -27,19 +27,20 @@
         </div> -->
         <div class="col-md-6">
             <div class="mb-3">
-                <label for="Email" class="form-label">Email</label>
-                <input type="Email" class="form-control" value="" name="Email" id="Email" placeholder="abc@email.com">
-            </div>
-
-        </div>
-        <div class="col-md-6">
-            <div class="mb-3">
                 <label for="PhoneNumber" class="form-label">Phone Number</label>
                 <input type="text" class="form-control" value="" name="PhoneNumber" id="PhoneNumber" placeholder="Enter Phone Number">
 
             </div>
 
         </div>
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email</label>
+                <input type="Email" class="form-control" value="" name="Email" id="Email" placeholder="abc@email.com">
+            </div>
+
+        </div>
+
         <div class="col-md-12">
             <div class="mb-3">
                 <label for="Message" class="form-label">Message</label>
@@ -129,5 +130,4 @@
 
         });
     });
- 
 </script>

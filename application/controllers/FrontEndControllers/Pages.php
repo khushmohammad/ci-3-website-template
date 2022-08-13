@@ -341,9 +341,7 @@ class Pages extends CI_Controller
         if (!$this->email->send()) {
             $errors = $this->email->print_debugger();
             print_r($errors);
-        } else {
-            echo "success";
-        }
+        } 
     }
 
     public  function email_send()
