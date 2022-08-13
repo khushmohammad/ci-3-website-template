@@ -171,11 +171,11 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
 
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="RegisterErrorModal" tabindex="-1" aria-labelledby="RegisterErrorModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Somthing Wrong</h5>
+                <h5 class="modal-title" id="RegisterErrorModalLabel">Somthing Wrong</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -229,7 +229,8 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                             // $('#RegisterDealer')[0].reset();
 
                         } else {
-                            $('#exampleModal').modal('show');
+                            $('#RegisterErrorModal').modal('show');
+                            $("#RegisterErrorModal").css('display', 'block');
                             $(".print-error-msg").css('display', 'block');
                             $(".print-error-msg").html(data.error);
                             //  $("#RegisterDealer :input").css("border-color", "red")
@@ -257,10 +258,10 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
                             setTimeout(() => {
                                 $("#formSuccess").addClass('d-none');
                             }, 3000);
-                            $('#RegisterDealer')[0].reset();
+                          //  $('#RegisterDealer')[0].reset();
 
                         } else {
-                            $('#exampleModal').modal('show');
+                            $('#RegisterErrorModal').modal('show');
                             $(".print-error-msg").css('display', 'block');
                             $(".print-error-msg").html(data.error);
                             //  $("#RegisterDealer :input").css("border-color", "red")
