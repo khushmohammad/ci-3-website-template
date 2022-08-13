@@ -10,6 +10,13 @@ class Pages extends CI_Controller
     {
         parent::__construct();
         $this->load->helper('captcha');
+        $config = array(
+            'charset' => 'utf-8',
+            'wordwrap' => TRUE,
+            'mailtype' => 'html'
+        );
+
+        $this->email->initialize($config);
     }
 
 
@@ -232,6 +239,7 @@ class Pages extends CI_Controller
         // echo "<pre>";
         // echo print_r($_POST);
         // echo "</pre>";
+
         // die();
 
 
@@ -264,6 +272,11 @@ class Pages extends CI_Controller
                     'field' => 'PhoneNumber',
                     'label' => 'Phone Number',
                     'rules' => 'required|is_unique[enquery.contact]'
+                ),
+                array(
+                    'field' => 'Message',
+                    'label' => 'Message',
+                    'rules' => 'required'
                 )
 
             );
@@ -288,8 +301,10 @@ class Pages extends CI_Controller
 
                 );
 
+
                 if ($this->db->insert('enquery', $data)) {
                     echo json_encode(['success' => 'Thank you for getting in touch with us. We received your message and will respond to your inquiry.']);
+                    $this->sendEnqueryEmail($data);
                 } else {
                     echo json_encode(['error' => 'error']);
                 }
@@ -300,7 +315,36 @@ class Pages extends CI_Controller
         }
     }
 
+    public function sendEnqueryEmail($postData = "")
+    {
+        // echo "<pre>";
+        // echo print_r($postData);
 
+        // echo  $postData['name'];
+        // die();
+        $data['UserData'] = $postData;
+        //  $this->load->view('Email/EnqueyFormEmailTemp', $data);
+        // die();
+
+        $emailTemp = $this->load->view('Email/EnqueyFormEmailTemp',  $data, true);
+        $from = 'info@avenuepoultech.com';
+        $to =  $postData['email'];
+        $cc =   'info@avenuepoultech.com';
+        $subject =  'Thank you for getting in touch with us';
+        //$message =  $postData['message'] ? $postData['message'] : $emailTemp;
+
+        $this->email->from($from, 'Avenue Poultech');
+        $this->email->to($to);
+        $this->email->cc($cc);
+        $this->email->subject($subject);
+        $this->email->message($emailTemp);
+        if (!$this->email->send()) {
+            $errors = $this->email->print_debugger();
+            print_r($errors);
+        } else {
+            echo "success";
+        }
+    }
 
     public  function email_send()
     {
@@ -383,13 +427,7 @@ class Pages extends CI_Controller
 
         //$this->load->view('Email/EnqueyFormEmailTemp', $data);
 
-        $config = array(
-            'charset' => 'utf-8',
-            'wordwrap' => TRUE,
-            'mailtype' => 'html'
-        );
 
-        $this->email->initialize($config);        
 
         $this->email->from($from, 'Avenue Poultech');
 
