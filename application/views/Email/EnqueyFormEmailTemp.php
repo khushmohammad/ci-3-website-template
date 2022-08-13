@@ -84,7 +84,7 @@ $message = empty($UserData['message']) ? "message" :  $UserData['message'];
 
       .w-24,
       .w-24>tbody>tr>td {
-        width: 96px !important
+        width: 50px !important
       }
 
       .p-2:not(table),
@@ -219,15 +219,17 @@ $message = empty($UserData['message']) ? "message" :  $UserData['message'];
                                     <table class="" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%;" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="col-12 text-center" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" align="center" valign="top">
+                                          <td class="col-12" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; padding-right: 24px; width: 100%; margin: 0;" valign="top">
                                             <table class="p-4" role="presentation" border="0" cellpadding="0" cellspacing="0">
                                               <tbody>
                                                 <tr>
-                                                  <td style="line-height: 24px; font-size: 16px; margin: 0; padding: 16px;" align="left">
+                                                  <td style="line-height: 24px; font-size: 16px; margin: 0;" align="left">
                                                     <div class="">
-                                                      <p style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="left">
-                                                      <?php echo $message; ?>
-                                                    </p>
+                                                      <p style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;font-style: italic;" align="left">
+                                                        "
+                                                        <?php echo $message; ?>
+                                                        "
+                                                      </p>
                                                     </div>
                                                   </td>
                                                 </tr>
@@ -277,7 +279,7 @@ $message = empty($UserData['message']) ? "message" :  $UserData['message'];
                               <tbody>
                                 <tr>
                                   <td class="col-12 p-2 text-center" style="line-height: 24px; font-size: 16px; min-height: 1px; font-weight: normal; width: 100%; margin: 0; padding: 8px 24px 8px 8px;" align="center" valign="top">
-                                    <img class="w-24" src="http://132.1.0.117/org/public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png" alt="logo" style="height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; width: 96px; border-style: none; border-width: 0;" width="96">
+                                    <img class="w-24" src="http://132.1.0.117/org/public/frontend/assets/img/Avenue/Avenue-Logo-232x300.png" alt="logo" style="height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; width: 50px; border-style: none; border-width: 0;" width="50">
                                     <p class="text-center" style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="center">Avenue Poultech</p>
                                   </td>
                                 </tr>

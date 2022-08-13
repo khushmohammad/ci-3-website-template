@@ -404,8 +404,8 @@ class Pages extends CI_Controller
         // echo print_r($_POST);
         // echo "</pre>";
         // die();
-        $this->load->view('TestView');
-        //$this->load->view('Email/EnqueyFormEmailTemp');
+       // $this->load->view('TestView');
+        $this->load->view('Email/EnqueyFormEmailTemp');
 
     }
     public  function testViewEmail()
