@@ -11,7 +11,7 @@
     ?>
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">DealerView List</h1>
+            <h1 class="mt-4">Enquery List</h1>
             <div class="row">
                 <div class="col">
                     <ol class="breadcrumb mb-4">
@@ -20,9 +20,9 @@
 
                     </ol>
                 </div>
-                <div class="col text-center">
+                <!-- <div class="col text-center">
                     <a type="button" class="btn btn-primary float-md-end" href="<?php echo site_url(); ?>admin/AddEditDealer">Add</a>
-                </div>
+                </div> -->
             </div>
 
             <div class="card mb-4">
@@ -72,7 +72,9 @@
                                     <i class="fa-solid fa-pen-to-square"></i>
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                       
+                                        <li>
+                                            <a id="Edit" class="dropdown-item ButtonId"  href="' . site_url() . 'admin/AddEditEnquery/' . $value["id"] . '">Edit</a>
+                                        </li>
                                         <li>
                                             <button class="dropdown-item" id="Delete" onclick="DeleteEnquery(this)"  dataId=' . $value["id"] . ' >Delete</button>
                                         </li>

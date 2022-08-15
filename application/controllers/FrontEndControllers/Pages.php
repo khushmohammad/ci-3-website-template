@@ -223,6 +223,14 @@ class Pages extends CI_Controller
 
     public function SubmitEnqueryForm()
     {
+
+        // echo "khush";
+		// echo "<pre>";
+		// echo print_r($_POST);
+		// echo "</pre>";
+		// die();
+
+
         $captcha = $this->input->post('captcha');
         $captcha_answer = $this->session->userdata('captchaword1');
 
