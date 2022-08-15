@@ -15,6 +15,7 @@
     $U_PASSWORD  = empty($users['U_PASSWORD']) ? "" : $users['U_PASSWORD'];
     $U_CONTACT  = empty($users['U_CONTACT']) ? "" : $users['U_CONTACT'];
     $U_EMAIL  = empty($users['U_EMAIL']) ? "" : $users['U_EMAIL'];
+    $U_ACTIVE  = empty($users['U_ACTIVE']) ? "" : $users['U_ACTIVE'];
     //die();
 
 
@@ -64,6 +65,18 @@
                 </div>
 
             </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="U_ACTIVE" class="form-label">Active</label>
+                    <select class="form-select" aria-label="U_ACTIVE" id="U_ACTIVE" name="U_ACTIVE">
+                        <option value="Y" <?php echo $U_ACTIVE == "Y" ? "selected" : "" ?> >Yes</option>
+                        <option value="N" <?php echo $U_ACTIVE == "N" ? "selected" : "" ?>>No</option>
+                    </select>
+                </div>
+
+            </div>
+
+
 
             <div class="col-12">
                 <div id="messagePassword" class="mb-4">

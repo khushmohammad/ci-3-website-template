@@ -464,12 +464,7 @@ class DashboardController extends CI_Controller
 					'field' => 'U_CONTACT',
 					'label' => 'Phone Number',
 					'rules' => 'required'
-				),
-				array(
-					'field' => 'U_PASSWORD',
-					'label' => 'Password',
-					'rules' => 'required'
-				)
+				),				
 
 			);
 		} else {
@@ -512,6 +507,7 @@ class DashboardController extends CI_Controller
 				'U_CONTACT' => $this->input->post('U_CONTACT'),
 				'U_EMAIL' => $this->input->post('U_EMAIL'),
 				'U_PASSWORD' => $this->input->post('U_PASSWORD'),
+				'U_ACTIVE' => $this->input->post('U_ACTIVE'),
 			);
 
 			if (isset($id)) {
