@@ -30,7 +30,7 @@ class Welcome extends CI_Controller
 		$data["user"] = array("user" => "khush");
 
 
-		$this->load->library('pdf');
+		$this->load->library('Pdf');
 		$objPHPPdf = new Pdf();
 
 
