@@ -101,6 +101,9 @@
                                         <li>
                                             <button class="dropdown-item" id="Delete" onclick="DeleteDealer(this)"  dataId=' . $value["id"] . ' >Delete</button>
                                         </li>
+                                        <li>
+                                            <button class="dropdown-item" id="Delete" onclick="SendFormDtoDealer(this)"  dataId=' . $value["id"] . ' >Send Form-D</button>
+                                        </li>
                                     </ul>
                                 </div>
                             </td>';
@@ -232,4 +235,40 @@
         //$('#datatablesSimple').DataTable().ajax.reload(null, false)
 
     }
+
+    function SendFormDtoDealer(e) {
+        console.log(e.attributes.dataid.value, "ee");
+
+        var Id = e.attributes.dataid.value;
+
+        $.ajax({
+            type: "POST",
+            url: '<?php echo site_url(); ?>BackendControllers/DashboardController/SendFormDtoDealer',
+
+            dataType: "json",
+            data: {
+                ID: Id
+            },
+            encode: true,
+            success: function(data) {
+                console.log(data);
+
+                //.  $('#Dealerdatatables').DataTable().ajax.reload();
+                setTimeout(() => {
+                    // table.DataTable().rows().draw();
+                    location.reload();
+                }, 500);
+
+            }
+        });
+
+        //var table = $('#Dealerdatatables').dataTable();
+
+
+        //$('#datatablesSimple').DataTable().ajax.reload(null, false)
+
+    }
+
+
+    
 </script>

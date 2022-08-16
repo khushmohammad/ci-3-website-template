@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Organic</title>
+  <title>Brite Bio</title>
   <link rel="icon" type="image/x-icon" href="<?php echo site_url("public/frontend/") ?>assets/img/Avenue/Avenue-Logo-232x300.png" />
 
 

@@ -62,7 +62,6 @@ class DashboardController extends CI_Controller
 		$this->load->view('Backend/Footer');
 	}
 
-
 	public function AddEditDealer($id = "")
 	{
 
@@ -261,6 +260,25 @@ class DashboardController extends CI_Controller
 	}
 
 
+	public function SendFormDtoDealer()
+	{
+
+		$id = $this->input->post('ID');
+		$query = $this->db->get_where('dealer_con', array('id' => $id));
+		$data['dealer']  = $query->row_array();
+
+		echo "<pre>";
+		echo print_r($id);
+		echo print_r($data);		
+		echo "</pre>";
+		//die();
+
+		// $this->load->view('Backend/DashHeader');
+		// $this->load->view('Backend/Pages/UserAddEdit', $data);
+		// $this->load->view('Backend/Footer');
+		
+	}
+
 	public function AddEditEnquery($id = "")
 	{
 
@@ -389,8 +407,6 @@ class DashboardController extends CI_Controller
 		}
 	}
 
-
-
 	public function DeleteEnquery()
 	{
 
@@ -408,13 +424,9 @@ class DashboardController extends CI_Controller
 		}
 	}
 
-
 	public function AddEdiUser($id = "")
 	{
-
-
 		$query = $this->db->get_where('dash_users', array('U_ID' => $id));
-
 		$data['users']  = $query->row_array();
 
 		// echo "<pre>";
@@ -422,12 +434,6 @@ class DashboardController extends CI_Controller
 		// echo print_r($id);		
 		// echo "</pre>";
 		//die();
-
-
-
-
-
-
 		$this->load->view('Backend/DashHeader');
 		$this->load->view('Backend/Pages/UserAddEdit', $data);
 		$this->load->view('Backend/Footer');
@@ -532,8 +538,6 @@ class DashboardController extends CI_Controller
 		}
 	}
 
-
-
 	public function DeleteUser()
 	{
 
@@ -551,12 +555,6 @@ class DashboardController extends CI_Controller
 		}
 	}
 
-
-
-
 	//END  VIEW DATA  
 	//site user view
-
-
-
 }
