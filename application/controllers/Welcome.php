@@ -19,6 +19,14 @@ class Welcome extends CI_Controller
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+
+	function __construct()
+	{
+		parent::__construct();
+
+		$this->load->library('Pdf');
+	}
+
 	public function index()
 	{
 		$this->load->view('welcome_message');
@@ -28,16 +36,15 @@ class Welcome extends CI_Controller
 	{
 		//load dompdf library
 		$data["user"] = array("user" => "khush");
+		$this->load->view('generatepdf', $data);
 
-
-		$this->load->library('Pdf');
 		$objPHPPdf = new Pdf();
 
 
 
 
 
-		$this->load->view('generatepdf', $data);
+
 		$html = $this->output->get_output();
 		$objPHPPdf->loadHtml($html, 'UTF-8');
 
@@ -55,6 +62,7 @@ class Welcome extends CI_Controller
 
 		$this->email->from('info@avenuepoultech.com', 'test email');
 		$this->email->to('khush311407@gmail.com');
+		$this->email->cc('info@avenuepoultech.com');
 		$this->email->subject('Email Test attachment');
 		$this->email->message('Testing the email class.');
 		$this->email->attach($pdf, 'application/pdf', "" . $pdfName . ".pdf", false);
