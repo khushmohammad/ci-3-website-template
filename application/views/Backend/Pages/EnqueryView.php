@@ -11,7 +11,7 @@
     ?>
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Enquery List</h1>
+            <h1 class="mt-4">Enquiries</h1>
             <div class="row">
                 <div class="col">
                     <ol class="breadcrumb mb-4">
@@ -43,16 +43,7 @@
 
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>S No</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Mesage</th>
-                                <th>Edit</th>
-                            </tr>
-                        </tfoot>
+
                         <tbody>
 
 

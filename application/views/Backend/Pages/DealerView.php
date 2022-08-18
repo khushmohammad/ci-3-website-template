@@ -17,7 +17,7 @@
     ?>
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">DealerView List</h1>
+            <h1 class="mt-4">Dealer</h1>
             <div class="row">
                 <div class="col">
                     <ol class="breadcrumb mb-4">
@@ -56,24 +56,6 @@
 
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>S No</th>
-                                <th>Dealer Name</th>
-                                <th>Address</th>
-                                <th>City</th>
-                                <th>District</th>
-                                <th>State</th>
-                                <th>Phone Number</th>
-                                <th>Email</th>
-                                <th>License No</th>
-                                <th>Issue Date</th>
-                                <th>Expiry Date</th>
-                                <th>License Issue by</th>
-                                <th>Pincode</th>
-                                <th>Edit</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
 
 
