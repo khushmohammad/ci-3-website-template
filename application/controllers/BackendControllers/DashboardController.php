@@ -296,7 +296,7 @@ class DashboardController extends CI_Controller
 			$this->email->to($data['dealer']['Email']);
 			$this->email->cc(CCEMAIL);
 			$this->email->subject('Principal Certificate - Brite Bio PROM O-Form');
-			$this->email->message($this->load->view('Email/DealerCertificate',  $data, false));
+			$this->email->message($this->load->view('Email/DealerCertificate',  $data, true));
 			//$this->email->message('Testing the email class.');
 			$this->email->attach($pdf, 'application/pdf', "" . $pdfName . ".pdf", false);
 			if (!$this->email->send()) {
