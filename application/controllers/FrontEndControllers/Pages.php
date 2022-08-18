@@ -225,10 +225,10 @@ class Pages extends CI_Controller
     {
 
         // echo "khush";
-		// echo "<pre>";
-		// echo print_r($_POST);
-		// echo "</pre>";
-		// die();
+        // echo "<pre>";
+        // echo print_r($_POST);
+        // echo "</pre>";
+        // die();
 
 
         $captcha = $this->input->post('captcha');
@@ -302,13 +302,13 @@ class Pages extends CI_Controller
 
 
         $data['UserData'] = $postData;
-       // $this->load->view('Email/' . $template, $data);
+        // $this->load->view('Email/' . $template, $data);
 
 
         $emailTemp = $this->load->view('Email/' . $template,  $data, true);
-        $from = 'info@avenuepoultech.com';
+        $from = FROMEMAIL;
         // $to =  $postData['email'];
-        $cc =   'info@avenuepoultech.com';
+        $cc =  CCEMAIL;
         $subject =  $subject;
         //$message =  $postData['message'] ? $postData['message'] : $emailTemp;
 
@@ -354,7 +354,7 @@ class Pages extends CI_Controller
         $to = "xifreuhessaula-3142@yopmail.com";
         $subject = "My subject";
         $txt = "Hello world!";
-        $headers = "From: info@avenuepoultech.com" . "\r\n" .
+        $headers = "From:" . FROMEMAIL . "\r\n" .
             "CC: khush311407@gmail.com";
 
         mail($to, $subject, $txt, $headers);

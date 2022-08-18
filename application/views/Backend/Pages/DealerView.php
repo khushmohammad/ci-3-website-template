@@ -1,5 +1,11 @@
 <div id="layoutSidenav_content" class="pt-5">
 
+    <div id="SentSuccess" style="z-index: 111;" class="alert alert-success alert-dismissible fade   position-absolute top-25 w-50 end-0 mt-5 me-4" role="alert">
+        <p class="m-0">success</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+
     <?php
     $url = $this->uri->uri_string();
 
@@ -242,25 +248,42 @@
         var Id = e.attributes.dataid.value;
 
         $.ajax({
-            type: "POST",
-            url: '<?php echo site_url(); ?>BackendControllers/DashboardController/SendFormDtoDealer',
+                type: "POST",
+                url: '<?php echo site_url(); ?>BackendControllers/DashboardController/SendFormDtoDealer',
 
-            dataType: "json",
-            data: {
-                ID: Id
-            },
-            encode: true,
-            success: function(data) {
-                console.log(data);
+                //  dataType: "text",
+                data: {
+                    ID: Id
+                },
+                encode: true,
+                // success: function(data) {
+                //     //console.log(data);             
 
-                //.  $('#Dealerdatatables').DataTable().ajax.reload();
-                setTimeout(() => {
-                    // table.DataTable().rows().draw();
-                    location.reload();
-                }, 500);
+                //     if (data) {
 
-            }
-        });
+                //         $("#SentSuccess").addClass("show").html("Form-O Certificate sent successfully");
+
+
+                //     } else {
+                //         $("#SentSuccess").addClass("show alert-danger").removeClass("alert-success").html("Something went wrong");
+                //     }
+
+                //     //.  $('#Dealerdatatables').DataTable().ajax.reload();
+
+                // },
+                // error: function(xhr, status, error) {
+                //     console.error(xhr, status, error);
+
+                // },
+
+            }).done(function(response) {
+                $("#SentSuccess").addClass("show").find("p").text("Form-O Certificate sent successfully");
+                //console.log(response);              
+            })
+            .fail(function(data) {
+                //console.log(data);
+                $("#SentSuccess").addClass("show alert-danger").removeClass("alert-success").find("p").text("Something Went Wrong, Please Try Again");
+            });;
 
         //var table = $('#Dealerdatatables').dataTable();
 
@@ -268,7 +291,4 @@
         //$('#datatablesSimple').DataTable().ajax.reload(null, false)
 
     }
-
-
-    
 </script>

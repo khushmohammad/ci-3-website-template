@@ -35,6 +35,75 @@ class Welcome extends CI_Controller
 	function GeneratePdf1()
 	{
 		//load dompdf library
+		$this->load->library('Pdf');
+		$data["user"] = array("user" => "khush");
+		$this->load->view('generatepdf', $data);
+
+		$objPHPPdf = new Pdf();
+
+
+
+
+
+
+		$html = $this->output->get_output();
+		$objPHPPdf->loadHtml($html, 'UTF-8');
+
+
+
+		// (Optional) Setup the paper size and orientation landscape portrait
+		$objPHPPdf->setPaper('A4', 'portrait');
+		// Render the HTML as PDF
+		$objPHPPdf->render();
+		//$pdf = $objPHPPdf->output();
+		//$pdfName = date("m-d H-i-s") . ".pdf";
+
+
+		//	$objPHPPdf->stream("html_contents.pdf", array("Attachment" => 0));
+
+		// $this->email->from(FROMEMAIL, 'test email');
+		// $this->email->to('khush311407@gmail.com');
+		// $this->email->cc(CCEMAIL);
+		// $this->email->subject('Email Test attachment');
+		// $this->email->message('Testing the email class.');
+		// $this->email->attach($pdf, 'application/pdf', "" . $pdfName . ".pdf", false);
+		// if (!$this->email->send()) {
+		// 	$errors = $this->email->print_debugger();
+		// 	print_r($errors);
+		// } else {
+		// 	echo "success";
+		// }
+
+
+
+
+		// $r = $this->email->send();
+		// if (!$r) {
+		// 	// "Failed to send email:" . $this->email->print_debugger(array("header")));
+		// } else {
+		// 	// "Email sent"
+		// }
+		//file_put_contents('public/mypap.pdf', $pdfName);
+	}
+
+	function GeneratePdf()
+	{
+		$data["user"] = array("user" => "khush");
+		$this->load->view('generatepdf', $data);
+		$html = $this->output->get_output();
+		// Load pdf library
+		$this->load->library('pdf');
+		$this->pdf->loadHtml($html);
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->render();
+		// Output the generated PDF (1 = download and 0 = preview)
+		$this->pdf->stream("html_contents.pdf", array("Attachment" => 1));
+		//file_put_contents('mypap.pdf', $file);
+	}
+
+	function GeneratePdfworkgood()
+	{
+		//load dompdf library
 		$data["user"] = array("user" => "khush");
 		$this->load->view('generatepdf', $data);
 
@@ -83,20 +152,5 @@ class Welcome extends CI_Controller
 		// 	// "Email sent"
 		// }
 		//file_put_contents('public/mypap.pdf', $pdfName);
-	}
-
-	function GeneratePdf()
-	{
-		$data["user"] = array("user" => "khush");
-		$this->load->view('generatepdf', $data);
-		$html = $this->output->get_output();
-		// Load pdf library
-		$this->load->library('pdf');
-		$this->pdf->loadHtml($html);
-		$this->pdf->setPaper('A4', 'potrait');
-		$this->pdf->render();
-		// Output the generated PDF (1 = download and 0 = preview)
-		$this->pdf->stream("html_contents.pdf", array("Attachment" => 1));
-		//file_put_contents('mypap.pdf', $file);
 	}
 }

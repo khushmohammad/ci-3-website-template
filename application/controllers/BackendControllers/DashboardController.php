@@ -267,16 +267,45 @@ class DashboardController extends CI_Controller
 		$query = $this->db->get_where('dealer_con', array('id' => $id));
 		$data['dealer']  = $query->row_array();
 
-		echo "<pre>";
-		echo print_r($id);
-		echo print_r($data);		
-		echo "</pre>";
-		//die();
 
-		// $this->load->view('Backend/DashHeader');
-		// $this->load->view('Backend/Pages/UserAddEdit', $data);
-		// $this->load->view('Backend/Footer');
-		
+		//die();
+		// send Form-o with attached email 
+
+		$this->load->library('Pdf');
+
+
+		$objPHPPdf = new Pdf();
+		$html = $this->output->get_output($this->load->view('generatepdf', $data));
+		$objPHPPdf->loadHtml($html, 'UTF-8');
+
+
+
+		// (Optional) Setup the paper size and orientation landscape portrait
+		$objPHPPdf->setPaper('A4', 'portrait');
+		$objPHPPdf->render();
+		$pdf = $objPHPPdf->output();
+		$pdfName = $data['dealer']['Dealer_Name'] . date("m-d H-i-s") . ".pdf";
+		// Render the HTML as PDF
+		//echo json_encode(['success' => 'Form=O Certificate sent successfully']);
+
+		//$objPHPPdf->stream("html_contents.pdf", array("Attachment" => 0));
+
+
+		$this->email->from(FROMEMAIL, 'test email');
+		$this->email->to($data['dealer']['Email']);
+		$this->email->cc(CCEMAIL);
+		$this->email->subject('Email Test attachment');
+		$this->email->message('Testing the email class.');
+		$this->email->attach($pdf, 'application/pdf', "" . $pdfName . ".pdf", false);
+		if (!$this->email->send()) {
+			http_response_code(500);
+			echo json_encode(['error' => 'Something went wrong']);
+			// $errors = $this->email->print_debugger();
+			// print_r($errors);
+		} else {
+			http_response_code(200);
+			echo json_encode(['success' => 'Form-O Certificate sent successfully']);
+		}
 	}
 
 	public function AddEditEnquery($id = "")
@@ -470,7 +499,7 @@ class DashboardController extends CI_Controller
 					'field' => 'U_CONTACT',
 					'label' => 'Phone Number',
 					'rules' => 'required'
-				),				
+				),
 
 			);
 		} else {
