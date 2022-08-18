@@ -1,8 +1,9 @@
 <?php
-// echo "<pre>";
+echo "<pre>";
 
-// echo print_r($dealer);
-// echo "</pre>";
+echo print_r($dealer);
+echo "</pre>";
+die();
 
 $CertificateDate = date("d-m-Y");
 $id = empty($dealer['id']) ? "" : $dealer['id'];

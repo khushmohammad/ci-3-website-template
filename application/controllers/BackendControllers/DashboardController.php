@@ -15,6 +15,13 @@ class DashboardController extends CI_Controller
 		$this->userId = $this->session->userdata('U_USERNAME');
 		$userId = $this->session->userdata('U_USERNAME');
 		$this->load->helper('captcha');
+		$config = array(
+			'charset' => 'utf-8',
+			'wordwrap' => TRUE,
+			'mailtype' => 'html'
+		);
+
+		$this->email->initialize($config);
 	}
 	// check log in  function  
 	private function logged_in()
@@ -296,9 +303,9 @@ class DashboardController extends CI_Controller
 		$this->email->to($data['dealer']['Email']);
 		$this->email->cc(CCEMAIL);
 		$this->email->subject('Principal Certificate - Brite Bio PROM O-Form');
-		$this->email->attach($pdf, 'application/pdf', "" . $pdfName . ".pdf", false);
 		$this->email->message($this->load->view('Email/DealerCertificate',  $data, true));
 		//$this->email->message('Testing the email class.');
+		$this->email->attach($pdf, 'application/pdf', "" . $pdfName . ".pdf", false);
 		if (!$this->email->send()) {
 			http_response_code(500);
 			echo json_encode(['error' => 'Something went wrong']);
