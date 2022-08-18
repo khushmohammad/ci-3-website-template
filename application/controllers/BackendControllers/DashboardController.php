@@ -267,6 +267,7 @@ class DashboardController extends CI_Controller
 		$query = $this->db->get_where('dealer_con', array('id' => $id));
 		$data['dealer']  = $query->row_array();
 
+		
 
 		//die();
 		// send Form-o with attached email 
@@ -289,25 +290,28 @@ class DashboardController extends CI_Controller
 		//echo json_encode(['success' => 'Form=O Certificate sent successfully']);
 
 		//$objPHPPdf->stream("html_contents.pdf", array("Attachment" => 0));
-		$emailTemp = $this->load->view('Email/DealerCertificate',  $data, true);
-
-		$this->email->from(FROMEMAIL, 'Avenue Poultech');
-		$this->email->to($data['dealer']['Email']);
-		$this->email->cc(CCEMAIL);
-		$this->email->subject('Principal Certificate - Brite Bio PROM O-Form');
-		$this->email->message($emailTemp);
-		//$this->email->message('Testing the email class.');
-		$this->email->attach($pdf, 'application/pdf', "" . $pdfName . ".pdf", false);
-		if (!$this->email->send()) {
-			http_response_code(500);
-			echo json_encode(['error' => 'Something went wrong']);
-			// $errors = $this->email->print_debugger();
-			// print_r($errors);
-		} else {
-			http_response_code(200);
-			echo json_encode(['success' => 'Form-O Certificate sent successfully']);
+		if ($pdf) {
+			//$emailTemp = $this->load->view('Email/DealerCertificate',  $data, true);
+			$this->email->from(FROMEMAIL, 'Avenue Poultech');
+			$this->email->to($data['dealer']['Email']);
+			$this->email->cc(CCEMAIL);
+			$this->email->subject('Principal Certificate - Brite Bio PROM O-Form');
+			$this->email->message($this->load->view('Email/DealerCertificate',  $data, false));
+			//$this->email->message('Testing the email class.');
+			$this->email->attach($pdf, 'application/pdf', "" . $pdfName . ".pdf", false);
+			if (!$this->email->send()) {
+				http_response_code(500);
+				echo json_encode(['error' => 'Something went wrong']);
+				// $errors = $this->email->print_debugger();
+				// print_r($errors);
+			} else {
+				http_response_code(200);
+				echo json_encode(['success' => 'Form-O Certificate sent successfully']);
+			}
 		}
 	}
+
+
 
 	public function AddEditEnquery($id = "")
 	{
