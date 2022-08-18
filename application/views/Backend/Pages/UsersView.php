@@ -9,7 +9,7 @@
 
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">User List</h1>
+            <h1 class="mt-4">User</h1>
             <div class="row">
                 <div class="col">
                     <ol class="breadcrumb mb-4">
@@ -36,18 +36,7 @@
                                 <th>Edit</th>
 
                             </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Contact</th>
-                                <th>Status</th>
-                                <th>Edit</th>
-
-
-                            </tr>
-                        </tfoot>
+                        </thead>                       
                         <tbody>
                             <?php
                             foreach ($user as $value) {
