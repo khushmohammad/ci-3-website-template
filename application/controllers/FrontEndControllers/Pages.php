@@ -170,6 +170,10 @@ class Pages extends CI_Controller
                 echo json_encode(['error' => $errors]);
             } else {
 
+                $query = $this->db->query("SELECT MAX(id) as LastId FROM dealer_con");
+                $LastId = $query->row_array();
+
+
                 $data = array(
                     'Dealer_Name' => $this->input->post('DealerName'),
                     'Address' => $this->input->post('Address'),
@@ -182,7 +186,8 @@ class Pages extends CI_Controller
                     'Issue_Date' => $this->input->post('IssueDate'),
                     'Expiry_Date' => $this->input->post('ExpiryDate'),
                     'License_Issue_by' => $this->input->post('LicenseIssueBy'),
-                    'Pincode' => $this->input->post('Pincode')
+                    'Pincode' => $this->input->post('Pincode'),
+                    'Certificate_No' => "AP/" . date("Y-d") . "/" . sprintf("%04d", $LastId['LastId'] + 1)
                 );
                 //$this->sendEnqueryEmail($data['Email'], $data, 'RegisterDealerFormEmailTemp', 'Thank you for registering as Dealer with us');
 
@@ -387,7 +392,13 @@ class Pages extends CI_Controller
         // die();
         // $this->load->view('TestView');
         // $this->load->view('Email/EnqueyFormEmailTemp');
-        $this->load->view('Email/RegisterDealerFormEmailTemp');
+        //  $this->load->view('Email/RegisterDealerFormEmailTemp');
+         $this->load->view('Email/DealerCertificate');
+        
+        // $query = $this->db->query("SELECT MAX(id) as LastId FROM dealer_con");
+        // $LastId = $query->row_array();
+        // echo "<pre>";
+        // echo print_r($LastId['LastId']);
     }
     public  function testViewEmail()
     {

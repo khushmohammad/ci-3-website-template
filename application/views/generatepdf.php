@@ -7,7 +7,7 @@
 $CertificateDate = date("d-m-Y");
 $id = empty($dealer['id']) ? "" : $dealer['id'];
 
-$CertificateNumber = "AP/" . date("Y-d") . "/" . sprintf("%04d", $id);
+$CertificateNumber = empty($dealer['Certificate_No']) ? "" : $dealer['Certificate_No'];  //"AP/" . date("Y-d") . "/" . sprintf("%04d", $id);
 $Dealer_Name = empty($dealer['Dealer_Name']) ? "" : $dealer['Dealer_Name'];
 $id = empty($dealer['id']) ? "" : $dealer['id'];
 $Address = empty($dealer['Address']) ? "" : $dealer['Address'] . ",";
@@ -130,7 +130,7 @@ $Pincode = empty($dealer['Pincode']) ? "" : $dealer['Pincode'];
         <div><b> <?php echo strtoupper($Dealer_Name); ?></b> </div>
         <div><?php echo $Address; ?> <?php echo $City; ?> </div>
         <div><?php echo $District; ?> <?php echo $State; ?> <?php echo $Pincode; ?> </div>
-       
+
     </div>
 
 

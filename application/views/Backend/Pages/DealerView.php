@@ -1,6 +1,6 @@
 <div id="layoutSidenav_content" class="pt-5">
 
-    <div id="SentSuccess" style="z-index: 111;" class="alert alert-success alert-dismissible fade   position-absolute top-25 w-50 end-0 mt-5 me-4" role="alert">
+    <div id="SentSuccess" style="z-index: 111;" class="alert alert-success alert-dismissible fade   position-fixed top-25 w-50 end-0 mt-5 me-4" role="alert">
         <p class="m-0">success</p>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
