@@ -80,7 +80,7 @@ $this->load->view('FrontEnd/Template/PageHeading', $data);
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h5>Our Email </h5>
-                                            <p> <a class="text-dark" href="mailto:avenuepoultech@gmail.com ">avenuepoultech@gmail.com </a> </p>
+                                            <p> <a class="text-dark" href="mailto:info@avenuepoultech.com">info@avenuepoultech.com </a> </p>
                                         </div>
                                     </div>
                                 </div>

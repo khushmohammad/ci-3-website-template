@@ -14,7 +14,9 @@
 // echo "<pre>";
 // echo print_r($dealerData["dealer"]);
 // echo "</pre>";
+// Contact_Person_Name
 
+$Contact_Person_Name = empty($dealerData["dealer"]['Contact_Person_Name']) ? "" : $dealerData["dealer"]['Contact_Person_Name'];
 $Dealer_Name = empty($dealerData["dealer"]['Dealer_Name']) ? "" : $dealerData["dealer"]['Dealer_Name'];
 $id = empty($dealerData["dealer"]['id']) ? "" : $dealerData["dealer"]['id'];
 $Address = empty($dealerData["dealer"]['Address']) ? "" : $dealerData["dealer"]['Address'];
@@ -33,14 +35,24 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
 ?>
 <form id="RegisterDealer" method="post">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="mb-3">
                 <label for="DealerName" class="form-label">Dealer Name</label>
                 <input type="text" class="form-control" value="<?php echo  $Dealer_Name; ?>" name="DealerName" id="DealerName" placeholder="Enter Dealer Name">
 
             </div>
 
+
         </div>
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="Contact_Person_Name" class="form-label">Contact Person Name</label>
+                <input type="text" class="form-control" value="<?php echo  $Contact_Person_Name; ?>" name="Contact_Person_Name" id="Contact_Person_Name" placeholder="Enter Dealer Name">
+
+            </div>
+
+        </div>
+
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="PhoneNumber" class="form-label">Phone Number</label>

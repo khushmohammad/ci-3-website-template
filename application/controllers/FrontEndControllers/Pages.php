@@ -95,9 +95,15 @@ class Pages extends CI_Controller
         $captcha_answer = $this->session->userdata('captchaword');
         if ($captcha == $captcha_answer) {
             $config = array(
+              
                 array(
                     'field' => 'DealerName',
                     'label' => 'Dealer Name',
+                    'rules' => 'required'
+                ),
+                array(
+                    'field' => 'Contact_Person_Name',
+                    'label' => 'Contact Person Name',
                     'rules' => 'required'
                 ),
 
@@ -176,6 +182,7 @@ class Pages extends CI_Controller
 
                 $data = array(
                     'Dealer_Name' => $this->input->post('DealerName'),
+                    'Contact_Person_Name' => $this->input->post('Contact_Person_Name'),
                     'Address' => $this->input->post('Address'),
                     'City' => $this->input->post('City'),
                     'District' => $this->input->post('District'),
@@ -393,8 +400,8 @@ class Pages extends CI_Controller
         // $this->load->view('TestView');
         // $this->load->view('Email/EnqueyFormEmailTemp');
         //  $this->load->view('Email/RegisterDealerFormEmailTemp');
-         $this->load->view('Email/DealerCertificate');
-        
+        $this->load->view('Email/DealerCertificate');
+
         // $query = $this->db->query("SELECT MAX(id) as LastId FROM dealer_con");
         // $LastId = $query->row_array();
         // echo "<pre>";

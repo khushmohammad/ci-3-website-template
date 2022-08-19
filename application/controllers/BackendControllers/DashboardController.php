@@ -146,7 +146,11 @@ class DashboardController extends CI_Controller
 					'label' => 'Dealer Name',
 					'rules' => 'required'
 				),
-
+				array(
+					'field' => 'Contact_Person_Name',
+					'label' => 'Contact Person Name',
+					'rules' => 'required'
+				),
 				array(
 					'field' => 'PhoneNumber',
 					'label' => 'Phone Number',
@@ -220,6 +224,7 @@ class DashboardController extends CI_Controller
 
 				$data = array(
 					'Dealer_Name' => $this->input->post('DealerName'),
+					'Contact_Person_Name' => $this->input->post('Contact_Person_Name'),
 					'Address' => $this->input->post('Address'),
 					'City' => $this->input->post('City'),
 					'District' => $this->input->post('District'),
