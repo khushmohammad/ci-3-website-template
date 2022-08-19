@@ -38,7 +38,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
         <div class="col-md-12">
             <div class="mb-3">
                 <label for="DealerName" class="form-label">Dealer Name</label>
-                <input type="text" class="form-control" value="<?php echo  $Dealer_Name; ?>" name="DealerName" id="DealerName" placeholder="Enter Dealer Name">
+                <input type="text" class="form-control" value="<?php echo  $Dealer_Name; ?>" name="DealerName" id="DealerName" placeholder="EEnter Dealer Name M/s">
 
             </div>
 
@@ -47,7 +47,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="Contact_Person_Name" class="form-label">Contact Person Name</label>
-                <input type="text" class="form-control" value="<?php echo  $Contact_Person_Name; ?>" name="Contact_Person_Name" id="Contact_Person_Name" placeholder="Enter Dealer Name">
+                <input type="text" class="form-control" value="<?php echo  $Contact_Person_Name; ?>" name="Contact_Person_Name" id="Contact_Person_Name" placeholder="Enter Contact Person Name Mr.">
 
             </div>
 

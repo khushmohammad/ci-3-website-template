@@ -11699,3 +11699,7 @@ body {
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
 }
+
+div.dataTables_wrapper div.dataTables_length select{
+  min-width: 55px !important;
+}
