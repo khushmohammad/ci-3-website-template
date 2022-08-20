@@ -35,6 +35,8 @@ class Pages extends CI_Controller
         //END  VIEW DATA  
         //site user view
 
+        $title['pageName'] = $page;
+
         if ($page == "contact-us") {
 
 
@@ -74,11 +76,11 @@ class Pages extends CI_Controller
             $this->session->set_userdata('captchaword1', $captchaword1);
 
 
-            $this->load->view('FrontEnd/Header');
+            $this->load->view('FrontEnd/Header',$title);
             $this->load->view('FrontEnd/Pages/contact-us', ['captcha_image' => $image, 'enquery_captcha_image' => $image1]);
             $this->load->view('FrontEnd/Footer');
         } else {
-            $this->load->view('FrontEnd/Header');
+            $this->load->view('FrontEnd/Header',$title);
             $this->load->view('FrontEnd/Pages/' . $page);
             $this->load->view('FrontEnd/Footer');
         }
