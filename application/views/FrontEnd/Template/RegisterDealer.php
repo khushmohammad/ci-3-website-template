@@ -38,7 +38,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
         <div class="col-md-12">
             <div class="mb-3">
                 <label for="DealerName" class="form-label">Dealer Name</label>
-                <input type="text" class="form-control" value="<?php echo  $Dealer_Name; ?>" name="DealerName" id="DealerName" placeholder="Your Dealer Name M/s">
+                <input type="text" class="form-control" value="<?php echo  $Dealer_Name; ?>" name="DealerName" id="DealerName" placeholder="Dealer Name M/s">
 
             </div>
 
