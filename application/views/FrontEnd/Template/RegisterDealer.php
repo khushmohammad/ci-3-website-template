@@ -38,7 +38,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
         <div class="col-md-12">
             <div class="mb-3">
                 <label for="DealerName" class="form-label">Dealer Name</label>
-                <input type="text" class="form-control" value="<?php echo  $Dealer_Name; ?>" name="DealerName" id="DealerName" placeholder="EEnter Dealer Name M/s">
+                <input type="text" class="form-control" value="<?php echo  $Dealer_Name; ?>" name="DealerName" id="DealerName" placeholder="Your Dealer Name M/s">
 
             </div>
 
@@ -47,7 +47,7 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="Contact_Person_Name" class="form-label">Contact Person Name</label>
-                <input type="text" class="form-control" value="<?php echo  $Contact_Person_Name; ?>" name="Contact_Person_Name" id="Contact_Person_Name" placeholder="Enter Contact Person Name Mr.">
+                <input type="text" class="form-control" value="<?php echo  $Contact_Person_Name; ?>" name="Contact_Person_Name" id="Contact_Person_Name" placeholder="Your Name Mr.">
 
             </div>
 
@@ -136,13 +136,13 @@ $Pincode = empty($dealerData["dealer"]['Pincode']) ? "" : $dealerData["dealer"][
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="District" class="form-label">District</label>
-                <input type="text" class="form-control" value="<?php echo  $District; ?>" name="District" id="District" placeholder="Enter District" readonly>
+                <input type="text" class="form-control" value="<?php echo  $District; ?>" name="District" id="District" placeholder="District" readonly>
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="State" class="form-label">State</label>
-                <input type="text" class="form-control" value="<?php echo  $State; ?>" name="State" id="State" placeholder="Enter State" readonly>
+                <input type="text" class="form-control" value="<?php echo  $State; ?>" name="State" id="State" placeholder="State" readonly>
             </div>
             <!-- <label for="State" class="form-label">State</label>
             <select class="form-select" name="State" aria-label="Default select example">
